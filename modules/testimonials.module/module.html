@@ -1,0 +1,62 @@
+{# 
+  MODULE: Klantbeoordelingen Slider
+  source: index.html (Strict Fidelity)
+#}
+
+<section class="testimonials-module">
+  <div class="container">
+    <div class="testimonials-header">
+      <h2>{{ module.heading }}</h2>
+      {% if module.subtitle %}
+        <p>{{ module.subtitle }}</p>
+      {% endif %}
+    </div>
+    
+    {# 
+       Restoring .testimonials-slider wrapper. 
+       This is critical for .owl-nav positioning and .owl-item height (flex).
+    #}
+    <div class="testimonials-slider">
+      <div class="testimonials-track owl-carousel" id="testimonials-{{ name }}">
+        {% for review in module.testimonials %}
+          <article class="testimonial-card">
+            <div class="stars">
+              {% for i in range(review.rating) %}★{% endfor %}
+            </div>
+            <p>
+              {{ review.quote }}
+            </p>
+            <div class="author-content">
+              <div class="author">{{ review.author_name }}</div>
+              <div class="role">{{ review.author_role }}</div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% require_js %}
+<script>
+  $(function () {
+    $("#testimonials-{{ name }}").owlCarousel({
+      items: {{ module.slider_settings.items_desktop }},
+      margin: 18,
+      nav: true,
+      dots: false,
+      autoplay: {{ module.slider_settings.autoplay }},
+      navText: [
+        "",
+        {# The navigation button structure matches main.css expectation #}
+        "<span class='owl-nav-btn'><i class='bi bi-arrow-right'></i></span>",
+      ],
+      responsive: {
+        0: { items: {{ module.slider_settings.items_mobile }} },
+        768: { items: {{ module.slider_settings.items_tablet }} },
+        1200: { items: {{ module.slider_settings.items_desktop }} }
+      },
+    });
+  });
+</script>
+{% end_require_js %}

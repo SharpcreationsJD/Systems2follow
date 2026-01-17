@@ -1,0 +1,123 @@
+{# 
+  MODULE: Contact Formulier
+  source: traders.html
+#}
+
+{% require_css %}
+<style>
+  .trader-contact::after {
+    background: url("{{ get_asset_url('/Systems2followTheme/images/dedicated-section.jpg') }}") 50% / cover no-repeat;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+    z-index: 1;
+  }
+  @media (max-width: 991px) {
+    .trader-contact::after {
+      display: none;
+    }
+  }
+</style>
+{% end_require_css %}
+
+<section class="trader-contact">
+  <div class="container">
+    
+    {% if module.image.src %}
+      {# Split Layout with Image #}
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          {% set img_src = module.image.src %}
+          {% if img_src is string_startingwith "/" %}
+            {% set img_src = get_asset_url(img_src) %}
+          {% endif %}
+          <div class="contact-image mb-4 mb-lg-0" style="z-index: 2; position: relative;">
+            <img src="{{ img_src }}" alt="{{ module.image.alt }}" class="img-fluid rounded-4 w-100" style="object-fit: cover; min-height: 400px; max-height: 600px;">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-card w-100">
+             <h2>{{ module.heading }}</h2>
+            {% if module.description %}
+              <p>{{ module.description }}</p>
+            {% endif %}
+            
+            {# STATIC FORM - FORCED #}
+            <form class="contact-form">
+                <div class="form-grid">
+                  <div>
+                    <label for="traderFirstName-split">Name</label>
+                    <input id="traderFirstName-split" type="text" placeholder="John">
+                  </div>
+                  <div>
+                    <label for="traderLastName-split">Last Name</label>
+                    <input id="traderLastName-split" type="text" placeholder="Carter">
+                  </div>
+                  <div>
+                    <label for="traderEmail-split">Email</label>
+                    <input id="traderEmail-split" type="email" placeholder="example@email.com">
+                  </div>
+                  <div>
+                    <label for="traderPhone-split">Phone</label>
+                    <input id="traderPhone-split" type="tel" placeholder="(123) 456 - 789">
+                  </div>
+                </div>
+                <div class="form-area">
+                  <label for="traderMessage-split">Leave us a message</label>
+                  <textarea id="traderMessage-split" rows="4" placeholder="Please type your message here..."></textarea>
+                </div>
+                <button class="btn btn-accent rounded-pill contact-submit" type="submit">
+                  Send message
+                </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    
+    {% else %}
+      {# Default Centered Layout #}
+      <div class="trader-contact-grid">
+        <div class="contact-card">
+          <h2>{{ module.heading }}</h2>
+          {% if module.description %}
+            <p>{{ module.description }}</p>
+          {% endif %}
+          
+           {# STATIC FORM - FORCED #}
+            <form class="contact-form">
+                <div class="form-grid">
+                  <div>
+                    <label for="traderFirstName-center">Name</label>
+                    <input id="traderFirstName-center" type="text" placeholder="John">
+                  </div>
+                  <div>
+                    <label for="traderLastName-center">Last Name</label>
+                    <input id="traderLastName-center" type="text" placeholder="Carter">
+                  </div>
+                  <div>
+                    <label for="traderEmail-center">Email</label>
+                    <input id="traderEmail-center" type="email" placeholder="example@email.com">
+                  </div>
+                  <div>
+                    <label for="traderPhone-center">Phone</label>
+                    <input id="traderPhone-center" type="tel" placeholder="(123) 456 - 789">
+                  </div>
+                </div>
+                <div class="form-area">
+                  <label for="traderMessage-center">Leave us a message</label>
+                  <textarea id="traderMessage-center" rows="4" placeholder="Please type your message here..."></textarea>
+                </div>
+                <button class="btn btn-accent rounded-pill contact-submit" type="submit">
+                  Send message
+                </button>
+            </form>
+        </div>
+      </div>
+    {% endif %}
+    
+  </div>
+</section>

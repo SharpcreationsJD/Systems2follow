@@ -1,0 +1,106 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "All the answers you need"
+    },
+    {
+        "id": "subtitle",
+        "name": "subtitle",
+        "label": "Ondertitel",
+        "type": "text",
+        "default": "Find answers to common questions about our platform, trading systems, and investment process."
+    },
+    {
+        "id": "categories",
+        "name": "categories",
+        "label": "FAQ Categorieën",
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "max": 5
+        },
+        "children": [
+            {
+                "id": "factor_name",
+                "name": "factor_name",
+                "label": "Categorie Naam",
+                "type": "text",
+                "default": "Category"
+            },
+            {
+                "id": "questions",
+                "name": "questions",
+                "label": "Vragen",
+                "type": "group",
+                "occurrence": {
+                    "min": 1,
+                    "max": 10
+                },
+                "children": [
+                    {
+                        "id": "question",
+                        "name": "question",
+                        "label": "Vraag",
+                        "type": "text",
+                        "default": "Question?"
+                    },
+                    {
+                        "id": "answer",
+                        "name": "answer",
+                        "label": "Antwoord",
+                        "type": "richtext",
+                        "default": "Answer text"
+                    }
+                ]
+            }
+        ],
+        "default": [
+            {
+                "name": "General FAQs",
+                "questions": [
+                    {
+                        "question": "What is Systems2follow and how does it work?",
+                        "answer": "Systems2follow is a platform that connects your brokerage account to professional trading systems. Every trade made by expert traders is automatically mirrored in your portfolio, allowing you to benefit from their expertise without managing trades yourself."
+                    },
+                    {
+                        "question": "How do I get started?",
+                        "answer": "Getting started is simple: 1) Choose a trading system that matches your goals, 2) Open a brokerage account with one of our partner brokers, 3) Link your account to the system, 4) The trades are executed automatically."
+                    },
+                    {
+                        "question": "Is my money safe?",
+                        "answer": "Yes. Your funds never leave your own brokerage account. Systems2follow only replicates trades - we don't handle your money. You can pause trading, change systems, or withdraw at any time."
+                    }
+                ]
+            },
+            {
+                "name": "Risk & Returns",
+                "questions": [
+                    {
+                        "question": "How is risk measured across systems?",
+                        "answer": "Each trading system is assigned a risk classification from 1-7, with 1 being the lowest risk. This is based on historical volatility, maximum drawdown, and trading frequency."
+                    },
+                    {
+                        "question": "Can I reduce my exposure anytime?",
+                        "answer": "Absolutely. You have full control over your account. You can pause trading, reduce position sizes, or stop following a system entirely at any time."
+                    }
+                ]
+            },
+            {
+                "name": "Trading Systems",
+                "questions": [
+                    {
+                        "question": "How do I connect a trading system?",
+                        "answer": "After selecting a system, you'll receive instructions to link your brokerage account using our secure API connection. The process takes just a few minutes."
+                    },
+                    {
+                        "question": "Do you support multiple brokers?",
+                        "answer": "Yes, we partner with several major brokers to give you flexibility. Check our systems page for compatible brokers for each trading system."
+                    }
+                ]
+            }
+        ]
+    }
+]

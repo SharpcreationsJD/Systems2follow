@@ -1,0 +1,37 @@
+{
+    "label":  "Trading Systemen",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "list",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Trading Systemen Overzicht",
+                          "description":  "Tabelweergave van alle beschikbare trading systemen met zoekfunctie. Toont systeem naam, trader, kapitaal, yield, return, performance grafiek en risico niveau.",
+                          "features":  [
+                                           "Aanpasbare titel",
+                                           "Optionele zoekbalk",
+                                           "View all knop",
+                                           "1-20 trading systemen",
+                                           "Positief/negatief kleurindicatie",
+                                           "Risico niveau indicator (1-7)",
+                                           "Performance sparkline grafiek",
+                                           "Donker of licht thema"
+                                       ],
+                          "usage":  "Gebruik op de homepage om een preview van systemen te tonen, of op een dedicated systemen pagina voor het volledige overzicht."
+                      }
+}

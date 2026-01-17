@@ -1,0 +1,117 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "Calculate your earnings"
+    },
+    {
+        "id": "lead_text",
+        "name": "lead_text",
+        "label": "Lead Tekst",
+        "type": "text",
+        "default": "Most investors don't have the hours or expertise to trade like professionals."
+    },
+    {
+        "id": "body_text",
+        "name": "body_text",
+        "label": "Body Tekst",
+        "type": "richtext",
+        "default": "Systems2follow connects your account directly to professional trading systems, so every trade executed by an expert is mirrored in your portfolio, safely and automatically."
+    },
+    {
+        "id": "calculator_title",
+        "name": "calculator_title",
+        "label": "Calculator Titel",
+        "type": "text",
+        "default": "Investment calculator"
+    },
+    {
+        "id": "amount_slider",
+        "name": "amount_slider",
+        "label": "Bedrag Slider",
+        "type": "group",
+        "children": [
+            {
+                "id": "amount_label",
+                "name": "amount_label",
+                "label": "Label",
+                "type": "text",
+                "default": "Choose your investment amount"
+            },
+            {
+                "id": "amount_min",
+                "name": "amount_min",
+                "label": "Minimum",
+                "type": "number",
+                "default": 2000
+            },
+            {
+                "id": "amount_max",
+                "name": "amount_max",
+                "label": "Maximum",
+                "type": "number",
+                "default": 20000
+            },
+            {
+                "id": "amount_default",
+                "name": "amount_default",
+                "label": "Standaard Waarde",
+                "type": "number",
+                "default": 12000
+            }
+        ]
+    },
+    {
+        "id": "period_slider",
+        "name": "period_slider",
+        "label": "Periode Slider",
+        "type": "group",
+        "children": [
+            {
+                "id": "period_label",
+                "name": "period_label",
+                "label": "Label",
+                "type": "text",
+                "default": "Your investment period (in months)"
+            },
+            {
+                "id": "period_min",
+                "name": "period_min",
+                "label": "Minimum (maanden)",
+                "type": "number",
+                "default": 6
+            },
+            {
+                "id": "period_max",
+                "name": "period_max",
+                "label": "Maximum (maanden)",
+                "type": "number",
+                "default": 36
+            },
+            {
+                "id": "period_default",
+                "name": "period_default",
+                "label": "Standaard Waarde",
+                "type": "number",
+                "default": 24
+            }
+        ]
+    },
+    {
+        "id": "expected_return_label",
+        "name": "expected_return_label",
+        "label": "Verwacht Rendement Label",
+        "type": "text",
+        "default": "Expected return"
+    },
+    {
+        "id": "average_yield",
+        "name": "average_yield",
+        "label": "Gemiddeld Jaarlijks Rendement (%)",
+        "type": "number",
+        "help_text": "Wordt gebruikt voor de berekening",
+        "default": 15
+    }
+]

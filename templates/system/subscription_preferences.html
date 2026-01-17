@@ -1,0 +1,28 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: false
+  label: Systems2follow - Email Preferences
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+  {% module "header" path="/Systems2followTheme/modules/header.module" %}
+  
+  {% module "sub_header" 
+     path="/Systems2followTheme/modules/sub-header.module",
+     heading="Email Voorkeuren",
+     subtitle="Beheer hier je nieuwsbrief instellingen."
+  %}
+
+  <div class="container py-5">
+      <div class="row justify-content-center">
+          <div class="col-lg-8">
+              <div class="system-content-card">
+                  {% module "email_subscriptions" path="@hubspot/email_subscriptions" %}
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  {% module "footer" path="/Systems2followTheme/modules/footer.module" %}
+{% endblock body %}

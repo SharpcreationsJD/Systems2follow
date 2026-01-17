@@ -1,0 +1,41 @@
+{
+    "label":  "Footer",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  true,
+    "host_template_types":  [
+                                "PAGE",
+                                "BLOG_LISTING",
+                                "BLOG_POST"
+                            ],
+    "icon":  "menu",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "content_tags":  [
+                         {
+                             "name":  "FOOTER",
+                             "source":  "HUBSPOT"
+                         }
+                     ],
+    "documentation":  {
+                          "title":  "Website Footer",
+                          "description":  "Volledige website footer met logo, beschrijving, nieuwsbrief aanmelding, menu kolommen, social media links en copyright tekst.",
+                          "features":  [
+                                           "Logo en beschrijving",
+                                           "Nieuwsbrief aanmelding met optionele HubSpot form koppeling",
+                                           "1-4 menu kolommen met links",
+                                           "Social media links (Instagram, LinkedIn, Twitter)",
+                                           "Copyright tekst"
+                                       ]
+                      }
+}

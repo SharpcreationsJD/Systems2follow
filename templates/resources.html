@@ -1,0 +1,64 @@
+<!--
+  Template: Resources Page
+  Beschrijving: Nieuws, FAQ en webinars (Website versie)
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+  {# Header #}
+  {% module "header" path="/Systems2followTheme/modules/header.module" %}
+
+  {# Pagina Header #}
+  {% module "sub_header" 
+     path="/Systems2followTheme/modules/sub-header.module"
+     heading="Traders" 
+  %} 
+  {# Note: Source says "Traders" in sub-header title for resources page, keeping as per source #}
+
+  {# Resources Content #}
+  {% dnd_area "main_content" label="Pagina Inhoud" %}
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {# News Module - Light Version #}
+          {% dnd_module 
+             path="/Systems2followTheme/modules/news-light.module"
+             heading="News and insights"
+             subtitle="Lorem ipsum dolor sit amet consectetur adipiscing elit semper dalar elementum tempus hac tellus libero accumsan."
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+    
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="/Systems2followTheme/modules/faq.module" %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+    
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="/Systems2followTheme/modules/webinar.module" %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+    
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="/Systems2followTheme/modules/dedicated.module" %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Footer #}
+  {% module "footer" path="/Systems2followTheme/modules/footer.module" %}
+{% endblock body %}

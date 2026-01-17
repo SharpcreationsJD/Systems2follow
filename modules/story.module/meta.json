@@ -1,0 +1,32 @@
+{
+    "label":  "Verhaal Sectie",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "book",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Story / Verhaal Sectie",
+                          "description":  "Twee-koloms sectie met afbeelding en tekst. Vergelijkbaar met Intro maar met andere styling. Afbeelding links of rechts.",
+                          "features":  [
+                                           "Titel",
+                                           "Richtext tekst",
+                                           "Grote afbeelding",
+                                           "Positie keuze (links/rechts)"
+                                       ]
+                      }
+}

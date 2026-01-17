@@ -1,0 +1,59 @@
+{# 
+  MODULE: Header - Navigatiebalk
+  source: header-nav
+#}
+
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      {# Logo #}
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+        {% if module.logo.src %}
+          {% set logo_src = module.logo.src %}
+          {% if logo_src is string_startingwith "/" %}
+            {% set logo_src = get_asset_url(logo_src) %}
+          {% endif %}
+          <img src="{{ logo_src }}" alt="{{ module.logo.alt }}">
+        {% else %}
+          <img src="{{ get_asset_url('/Systems2followTheme/images/logo-white.svg') }}" alt="Systems2follow">
+        {% endif %}
+      </a>
+      
+      {# Mobile Toggle #}
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      {# Navigation Menu #}
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-3">
+          {# Menu Items #}
+          {% for item in module.menu_items %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{ item.link_url.url.href }}">{{ item.link_text }}</a>
+            </li>
+          {% endfor %}
+          
+          {# CTA Button #}
+          {% if module.cta_button.text %}
+            <li class="nav-item">
+              <a class="btn btn-accent rounded-pill d-inline-flex align-items-center gap-2" href="{{ module.cta_button.url.url.href }}">
+                {{ module.cta_button.text }} <i class="bi bi-arrow-right"></i>
+              </a>
+            </li>
+          {% endif %}
+          
+          {# Language Selector #}
+          {% if module.language_selector.show_language %}
+            <li class="nav-item">
+              <a class="btn btn-outline-light d-flex align-items-center gap-2" href="#">
+                <span>{{ module.language_selector.current_language }}</span>
+                <i class="bi bi-chevron-down"></i>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

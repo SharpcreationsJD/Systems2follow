@@ -1,0 +1,54 @@
+{# 
+  MODULE: Trust Module
+  source: trust-module
+#}
+
+{% if module.background_image.src %}
+  {% set bg_url = module.background_image.src %}
+  {% if bg_url is string_startingwith "/" %}
+    {% set bg_url = get_asset_url(bg_url) %}
+  {% endif %}
+  {% set inline_style = 'style="--bg-image: url(' ~ bg_url ~ ');"' %}
+{% else %}
+  {% set inline_style = '' %}
+{% endif %}
+
+<section class="trust-module" {{ inline_style }}>
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="trust-media">
+          <div class="trust-icon trust-icon--top">
+            <i class="bi bi-person"></i>
+          </div>
+          <div class="trust-icon trust-icon--middle">
+            <i class="bi bi-person"></i>
+          </div>
+          <div class="trust-icon trust-icon--bottom">
+            <i class="bi bi-person"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 container-content">
+        <div class="trust-content">
+          <h2>{{ module.heading }}</h2>
+          <div class="trust-description">
+            {{ module.description }}
+          </div>
+          
+          {% if module.highlight_label %}
+            <p class="trust-label">{{ module.highlight_label }}</p>
+          {% endif %}
+          
+          {% if module.highlights %}
+            <ul class="trust-list">
+              {% for item in module.highlights %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

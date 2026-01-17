@@ -1,0 +1,32 @@
+{
+    "label":  "Vertrouwen Sectie",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "section",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Vertrouwen Sectie",
+                          "description":  "Half-brede sectie met tekstcontent links en een achtergrondafbeelding rechts. Donkere achtergrond met groene titel. Communiceert vertrouwen en veiligheid.",
+                          "features":  [
+                                           "Groene titel",
+                                           "Meerdere paragrafen (1-5)",
+                                           "Highlight optie per paragraaf",
+                                           "Grote achtergrondafbeelding rechts met gradient overlay"
+                                       ]
+                      }
+}

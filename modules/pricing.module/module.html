@@ -1,0 +1,151 @@
+{# 
+  MODULE: Pricing / Abonnement Selector
+  source: systems-single-page.html (Pricing Section)
+#}
+
+<section class="pricing-module" id="pricing-{{ name }}">
+  <div class="container">
+    <div class="pricing-header">
+      <h2>{{ module.heading }}</h2>
+      {% if module.description %}
+        <p>{{ module.description }}</p>
+      {% endif %}
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="pricing-card pricing-card--full">
+          <h3>Choose your investment</h3>
+          <div class="pricing-block">
+            <p class="pricing-label">1. Choose your duration</p>
+            <div class="option-list" data-group="duration">
+              {% for option in module.duration_options %}
+                <label class="option-item{% if loop.first %} is-selected{% endif %}">
+                  <input type="radio" name="duration-{{ name }}" value="{{ option.option_label }}" {% if loop.first %}checked{% endif %}>
+                  <span class="option-text">{{ option.option_label }}</span>
+                  <span class="option-dot"></span>
+                </label>
+              {% endfor %}
+            </div>
+          </div>
+          
+          <div class="pricing-block">
+            <p class="pricing-label">2. Choose your factor</p>
+            <div class="factor-headers">
+              <span></span>
+              <span>Required Capital</span>
+              <span>Cost p/month</span>
+              <span></span>
+            </div>
+            <div class="factor-list" data-group="factor">
+              {% for factor in module.factor_options %}
+                <label class="factor-item{% if loop.first %} is-selected{% endif %}" data-capital="{{ factor.capital }}" data-cost="{{ factor.cost }}" data-factor="{{ factor.factor_name }}">
+                  <input type="radio" name="factor-{{ name }}" {% if loop.first %}checked{% endif %}>
+                  <span class="factor-name">{{ factor.factor_name }}</span>
+                  <span class="factor-capital">{{ factor.capital }}</span>
+                  <span class="factor-cost">{{ factor.cost }}</span>
+                  <span class="option-dot"></span>
+                </label>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="pricing-stack">
+          <div class="pricing-summary">
+            <h3>Your selection</h3>
+            <div class="summary-grid">
+              <div>
+                <span class="summary-label">Factor</span>
+                <strong class="summary-value" data-summary="factor">{% set first_factor = module.factor_options|first %}{{ first_factor.factor_name }}</strong>
+              </div>
+              <div>
+                <span class="summary-label">Period</span>
+                <strong class="summary-value" data-summary="duration">{% set first_duration = module.duration_options|first %}{{ first_duration.option_label }}</strong>
+              </div>
+              <div>
+                <span class="summary-label">Total</span>
+                <strong class="summary-value" data-summary="capital">{{ first_factor.capital }}</strong>
+              </div>
+            </div>
+          </div>
+          
+          <div class="pricing-card">
+            <h3>Your details</h3>
+            <div class="details-grid">
+              <div>
+                <label class="field-label">First Name</label>
+                <input class="field-input" type="text" placeholder="First name">
+              </div>
+              <div>
+                <label class="field-label">Last Name</label>
+                <input class="field-input" type="text" placeholder="Last name">
+              </div>
+              <div>
+                <label class="field-label">Email</label>
+                <input class="field-input" type="email" placeholder="Email">
+              </div>
+              <div>
+                <label class="field-label">Mobile Number</label>
+                <input class="field-input" type="tel" placeholder="Mobile number">
+              </div>
+            </div>
+            <label class="consent-line">
+              <input type="checkbox">
+              <span class="consent-box"></span>
+              <span class="consent-text">{{ module.consent_text }}</span>
+            </label>
+            <button class="btn btn-accent rounded-pill w-100 pricing-confirm" type="button">
+              {{ module.submit_text }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% require_js %}
+<script>
+(function() {
+  const sectionId = 'pricing-{{ name }}';
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+  
+  const durationInputs = section.querySelectorAll('input[name^="duration-"]');
+  const factorItems = section.querySelectorAll('.factor-item');
+  const summaryDuration = section.querySelector('[data-summary="duration"]');
+  const summaryFactor = section.querySelector('[data-summary="factor"]');
+  const summaryCapital = section.querySelector('[data-summary="capital"]');
+  
+  durationInputs.forEach(input => {
+    input.addEventListener('change', () => {
+      if (summaryDuration) summaryDuration.textContent = input.value;
+      section.querySelectorAll('.option-item').forEach(item => item.classList.remove('is-selected'));
+      input.closest('.option-item')?.classList.add('is-selected');
+    });
+  });
+  
+  factorItems.forEach(item => {
+    const input = item.querySelector('input[type="radio"]');
+    if (!input) return;
+    input.addEventListener('change', () => {
+      factorItems.forEach(card => card.classList.remove('is-selected'));
+      item.classList.add('is-selected');
+      if (summaryFactor) summaryFactor.textContent = item.dataset.factor || 'Factor';
+      if (summaryCapital) summaryCapital.textContent = item.dataset.capital || 'EUR 0';
+    });
+  });
+
+  // Trigger initial state
+  const initialFactor = section.querySelector(".factor-item input:checked");
+  if (initialFactor) {
+    initialFactor.dispatchEvent(new Event("change"));
+  }
+  const initialDuration = section.querySelector('.option-item input:checked');
+  if (initialDuration) {
+    initialDuration.dispatchEvent(new Event("change"));
+  }
+})();
+</script>
+{% end_require_js %}

@@ -1,0 +1,26 @@
+{# 
+  MODULE: Sub-Header
+  source: sub-header section
+#}
+
+{% if module.background_image.src %}
+  {% set bg_url = module.background_image.src %}
+  {% if bg_url is string_startingwith "/" %}
+    {% set bg_url = get_asset_url(bg_url) %}
+  {% endif %}
+  {% set inline_style = 'style="--bg-image: url(' ~ bg_url ~ ');"' %}
+{% else %}
+  {% set inline_style = '' %}
+{% endif %}
+
+<section class="sub-header" {{ inline_style }}>
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
+      <div class="col-lg-8">
+        <h1 class="sub-header-title">
+          {{ module.heading }}
+        </h1>
+      </div>
+    </div>
+  </div>
+</section>

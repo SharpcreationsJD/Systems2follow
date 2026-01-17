@@ -1,0 +1,212 @@
+{# 
+  MODULE: System Single / Detail View
+  source: systems-single-page.html (Line 83-233)
+#}
+
+{% set instruments = module.overview.instruments|split(",") %}
+
+<section class="system-single-module">
+  <div class="container">
+    <div class="row g-4">
+      {# Sidebar #}
+      <div class="col-lg-4">
+        <aside class="system-sidebar">
+          <div class="system-panel">
+            <h3 class="panel-title">Overview:</h3>
+            <div class="overview-item">
+              <div class="overview-label">Trader</div>
+              <div class="overview-value">{{ module.overview.trader_name }}</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">Req. Capital</div>
+              <div class="overview-value">{{ module.overview.required_capital }}</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">Investment instruments</div>
+              <div class="overview-tags">
+                {% for instrument in instruments %}
+                  <span class="overview-pill overview-pill--solid">{{ instrument|trim }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">Risk Indicator</div>
+              <div class="overview-pill overview-pill--solid">{{ module.overview.risk_indicator }}</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">Efficiency | Current</div>
+              <div class="overview-pill overview-pill--solid">{{ module.overview.efficiency_current }}</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">Efficiency | Avg. per annum</div>
+              <div class="overview-pill overview-pill--solid">{{ module.overview.efficiency_avg }}</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">Efficiency | Since inception</div>
+              <div class="overview-pill overview-pill--solid">{{ module.overview.efficiency_total }}</div>
+            </div>
+            <div class="overview-item">
+              <div class="overview-label">Start date</div>
+              <div class="overview-value">{{ module.overview.start_date }}</div>
+            </div>
+          </div>
+          <a class="btn btn-accent rounded-pill w-100" href="{{ module.cta_link.url.href }}">
+            {{ module.cta_text }}
+          </a>
+        </aside>
+      </div>
+
+      {# Main Content #}
+      <div class="col-lg-8">
+        <div class="system-content">
+          {# About #}
+          <article class="system-panel">
+            <h3 class="panel-title">{{ module.about_title }}</h3>
+            {{ module.about_text }}
+          </article>
+
+          {# Performance Chart (Hardcoded from Source for fidelity) #}
+          <article class="system-panel">
+            <h3 class="panel-title">Performance:</h3>
+            <div class="performance-chart">
+              <div id="performance-chart" role="img" aria-label="Performance chart"></div>
+            </div>
+          </article>
+
+          {# Results Table (Hardcoded from Source) #}
+          <article class="system-panel">
+            <h3 class="panel-title">Results (%):</h3>
+             <div class="results-table-wrap">
+                  <table class="results-table">
+                    <thead>
+                      <tr>
+                        <th>Year</th>
+                        <th>Jan</th>
+                        <th>Feb</th>
+                        <th>Mar</th>
+                        <th>Apr</th>
+                        <th>May</th>
+                        <th>Jun</th>
+                        <th>Jul</th>
+                        <th>Aug</th>
+                        <th>Sep</th>
+                        <th>Oct</th>
+                        <th>Nov</th>
+                        <th>Dec</th>
+                        <th>YTD</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Year">2023</td>
+                        <td data-label="Jan">1.40</td>
+                        <td data-label="Feb">-0.20</td>
+                        <td data-label="Mar">2.60</td>
+                        <td data-label="Apr">1.90</td>
+                        <td data-label="May">-0.30</td>
+                        <td data-label="Jun">1.10</td>
+                        <td data-label="Jul">0.80</td>
+                        <td data-label="Aug">-0.40</td>
+                        <td data-label="Sep">1.30</td>
+                        <td data-label="Oct">0.90</td>
+                        <td data-label="Nov">1.05</td>
+                        <td data-label="Dec">0.70</td>
+                        <td data-label="YTD">10.12</td>
+                      </tr>
+                      <tr>
+                        <td data-label="Year">2024</td>
+                        <td data-label="Jan">0.80</td>
+                        <td data-label="Feb">1.20</td>
+                        <td data-label="Mar">1.90</td>
+                        <td data-label="Apr">-0.60</td>
+                        <td data-label="May">1.40</td>
+                        <td data-label="Jun">1.00</td>
+                        <td data-label="Jul">0.65</td>
+                        <td data-label="Aug">1.30</td>
+                        <td data-label="Sep">-0.20</td>
+                        <td data-label="Oct">1.75</td>
+                        <td data-label="Nov">0.90</td>
+                        <td data-label="Dec">1.10</td>
+                        <td data-label="YTD">11.24</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+          </article>
+          
+          {# Detailed Description #}
+          <article class="system-panel">
+            <h3 class="panel-title">{{ module.description_title }}</h3>
+            {{ module.description_text }}
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ApexCharts Library #}
+{% require_js position="head" %}
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+{% end_require_js %}
+
+{# Chart Initialization #}
+{% require_js %}
+<script>
+  (function() {
+      const performanceChartEl = document.querySelector("#performance-chart");
+      if (performanceChartEl && window.ApexCharts) {
+        const performanceOptions = {
+          chart: {
+            type: "area",
+            height: 260,
+            toolbar: { show: false },
+            animations: { enabled: true, easing: "easeinout", speed: 900 }
+          },
+          series: [{
+            name: "Portfolio",
+            data: [11200, 11800, 12150, 12900, 13750, 14500, 16800, 17650, 18900, 19850, 20950, 21400, 22250, 21800, 23100, 23850, 24600, 25250, 25800, 26650, 27300]
+          }],
+          stroke: { curve: "smooth", width: 3, colors: ["#8d6e63"] },
+          fill: {
+            type: "gradient",
+            gradient: { shadeIntensity: 0.25, opacityFrom: 0.45, opacityTo: 0.05, stops: [0, 90, 100] }
+          },
+          grid: { borderColor: "#e6e1e2", strokeDashArray: 4 },
+          xaxis: {
+            categories: ["Dec 18", "Apr 19", "Aug 19", "Dec 19", "Apr 20", "Aug 20", "Dec 20", "Apr 21", "Aug 21", "Dec 21", "Apr 22", "Aug 22", "Dec 22", "Apr 23", "Aug 23", "Dec 23", "Apr 24", "Aug 24", "Dec 24", "Apr 25", "Oct 25"],
+            labels: { style: { colors: "#6b7a75", fontSize: "11px" } }
+          },
+          yaxis: {
+            labels: {
+              formatter: (val) => "€" + Math.round(val).toLocaleString("nl-NL"),
+              style: { colors: "#6b7a75", fontSize: "11px" }
+            }
+          },
+          responsive: [{
+            breakpoint: 576,
+            options: {
+              chart: { height: 200 },
+              xaxis: {
+                labels: { show: false },
+                axisBorder: { show: false },
+                axisTicks: { show: false }
+              },
+              yaxis: {
+                tickAmount: 4,
+                labels: { style: { fontSize: "10px" } }
+              },
+              grid: { padding: { left: 6, right: 6 } }
+            }
+          }],
+          dataLabels: { enabled: false },
+          tooltip: {
+            y: { formatter: (val) => "€" + Math.round(val).toLocaleString("nl-NL") }
+          }
+        };
+        const performanceChart = new ApexCharts(performanceChartEl, performanceOptions);
+        performanceChart.render();
+      }
+  })();
+</script>
+{% end_require_js %}

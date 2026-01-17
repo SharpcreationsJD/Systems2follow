@@ -1,0 +1,58 @@
+<!--
+  Template: Blog Listing
+  Beschrijving: Standaard blog overzicht pagina
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+  {# Header #}
+  {% module "header" path="/Systems2followTheme/modules/header.module" %}
+
+  {# Pagina Header #}
+  {% module "sub_header" 
+     path="/Systems2followTheme/modules/sub-header.module"
+     heading="Blog"
+  %}
+
+  <section class="blog-listing py-5" style="background-color: #f2f4f4;">
+    <div class="container">
+      <div class="row g-4">
+        {% for content in contents %}
+          <div class="col-md-4">
+             <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                {% if content.featured_image %}
+                  <img src="{{ content.featured_image }}" class="card-img-top" alt="{{ content.name }}" style="height: 200px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body p-4">
+                   <h3 class="h5 fw-bold mb-3"><a href="{{ content.absolute_url }}" class="text-decoration-none text-dark">{{ content.name }}</a></h3>
+                   <div class="text-muted small mb-3">
+                     {{ content.publish_date_localized }}
+                   </div>
+                   <p class="card-text text-secondary mb-4">{{ content.post_list_content|truncatehtml(100) }}</p>
+                   <a href="{{ content.absolute_url }}" class="btn btn-outline-success rounded-pill btn-sm">
+                     Read more <i class="bi bi-arrow-right"></i>
+                   </a>
+                </div>
+             </div>
+          </div>
+        {% endfor %}
+      </div>
+      
+      {# Pagination #}
+      {% if contents.total_page_count > 1 %}
+        <div class="blog-pagination mt-5 text-center">
+             {% if last_page_num %}
+               <a class="btn btn-outline-dark rounded-pill me-2" href="{{ blog_page_link(last_page_num) }}">Previous</a>
+             {% endif %}
+             {% if next_page_num %}
+               <a class="btn btn-outline-dark rounded-pill ms-2" href="{{ blog_page_link(next_page_num) }}">Next</a>
+             {% endif %}
+        </div>
+      {% endif %}
+      
+    </div>
+  </section>
+
+  {# Footer #}
+  {% module "footer" path="/Systems2followTheme/modules/footer.module" %}
+{% endblock body %}

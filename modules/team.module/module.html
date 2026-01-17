@@ -1,0 +1,47 @@
+{# 
+  MODULE: Team Grid
+  source: traders.html
+#}
+
+<section class="traders-team">
+  <div class="container">
+    <div class="team-header">
+      <h2>{{ module.heading }}</h2>
+      <div class="section-desc">
+        {{ module.description }}
+      </div>
+    </div>
+    <div class="team-grid">
+      {% for member in module.members %}
+        <article class="team-card">
+          {% if member.photo.src %}
+            {% set photo_src = member.photo.src %}
+            {% if photo_src is string_startingwith "/" %}
+              {% set photo_src = get_asset_url(photo_src) %}
+            {% endif %}
+            <img class="team-photo" src="{{ photo_src }}" alt="{{ member.member_name }}" />
+          {% else %}
+             <img class="team-photo" src="{{ get_asset_url('/Systems2followTheme/images/select-img.jpg') }}" alt="{{ member.member_name }}" />
+          {% endif %}
+          
+          <h3>{{ member.member_name }}</h3>
+          <p>{{ member.role }}</p>
+          <div class="team-social">
+            {% if member.social_links.facebook %}
+              <a class="social-btn" href="{{ member.social_links.facebook }}"><i class="bi bi-facebook"></i></a>
+            {% endif %}
+            {% if member.social_links.twitter %}
+              <a class="social-btn" href="{{ member.social_links.twitter }}"><i class="bi bi-twitter-x"></i></a>
+            {% endif %}
+            {% if member.social_links.instagram %}
+              <a class="social-btn" href="{{ member.social_links.instagram }}"><i class="bi bi-instagram"></i></a>
+            {% endif %}
+            {% if member.social_links.linkedin %}
+              <a class="social-btn" href="{{ member.social_links.linkedin }}"><i class="bi bi-linkedin"></i></a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+{
+    "label":  "Mijlpalen Timeline",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "timeline",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Milestones / Tijdlijn",
+                          "description":  "Horizontale slider met jaartallen en beschrijvingen. Toont de geschiedenis of roadmap van het bedrijf.",
+                          "features":  [
+                                           "Titel en ondertitel",
+                                           "3-12 mijlpalen",
+                                           "Jaar + beschrijving per item",
+                                           "Horizontale slider/carousel"
+                                       ]
+                      }
+}

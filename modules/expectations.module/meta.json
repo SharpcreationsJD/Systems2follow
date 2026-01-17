@@ -1,0 +1,31 @@
+{
+    "label":  "Gids Verwachtingen",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "list",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Guide Expectations",
+                          "description":  "Feature lijst met iconen, titels en beschrijvingen. Plus een preview afbeelding rechts. Ideaal voor downloads of gidsen.",
+                          "features":  [
+                                           "Titel en beschrijving",
+                                           "2-6 features met Bootstrap iconen",
+                                           "Preview afbeelding"
+                                       ]
+                      }
+}

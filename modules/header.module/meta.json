@@ -1,0 +1,41 @@
+{
+    "label":  "Header - Navigatiebalk",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  true,
+    "host_template_types":  [
+                                "PAGE",
+                                "BLOG_LISTING",
+                                "BLOG_POST"
+                            ],
+    "icon":  "menu",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "content_tags":  [
+                         {
+                             "name":  "NAVIGATION",
+                             "source":  "HUBSPOT"
+                         }
+                     ],
+    "documentation":  {
+                          "title":  "Header - Navigatiebalk",
+                          "description":  "Vaste navigatiebalk bovenaan de pagina met logo, menu links, login knop en optionele taalkeuze. De header heeft een transparante achtergrond met blur effect en wordt fixed gepositioneerd.",
+                          "features":  [
+                                           "Responsive hamburger menu voor mobiel",
+                                           "Logo met link naar homepage",
+                                           "Configureerbare menu items (1-10 links)",
+                                           "Accent gekleurde CTA/Login knop",
+                                           "Optionele taalkeuze dropdown"
+                                       ]
+                      }
+}

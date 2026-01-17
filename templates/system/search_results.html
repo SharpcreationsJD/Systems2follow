@@ -1,0 +1,28 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: false
+  label: Systems2follow - Zoekresultaten
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+  {% module "header" path="/Systems2followTheme/modules/header.module" %}
+  
+  {% module "sub_header" 
+     path="/Systems2followTheme/modules/sub-header.module",
+     heading="Zoekresultaten",
+     subtitle="Resultaten voor uw zoekopdracht..."
+  %}
+
+  <div class="container py-5">
+      <div class="row">
+          <div class="col-12">
+              <div class="search-results-wrapper">
+                  {% module "search_results" path="@hubspot/search_results" %}
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  {% module "footer" path="/Systems2followTheme/modules/footer.module" %}
+{% endblock body %}

@@ -1,0 +1,46 @@
+{# 
+  MODULE: Trader Contact Form
+  source: traders.html
+  note: Uses static HTML form to match design exactly.
+#}
+
+<section class="trader-contact">
+  <div class="container">
+    <div class="trader-contact-grid">
+      <div class="contact-card">
+        <h2>{{ module.heading }}</h2>
+        <div class="contact-desc">
+          {{ module.description }}
+        </div>
+        
+        <form class="contact-form">
+          <div class="form-grid">
+            <div>
+              <label for="traderFirstName">Name</label>
+              <input id="traderFirstName" type="text" placeholder="John" />
+            </div>
+            <div>
+              <label for="traderLastName">Last Name</label>
+              <input id="traderLastName" type="text" placeholder="Carter" />
+            </div>
+            <div>
+              <label for="traderEmail">Email</label>
+              <input id="traderEmail" type="email" placeholder="example@email.com" />
+            </div>
+            <div>
+              <label for="traderPhone">Phone</label>
+              <input id="traderPhone" type="tel" placeholder="(123) 456 - 789" />
+            </div>
+          </div>
+          <div class="form-area">
+            <label for="traderMessage">Leave us a message</label>
+            <textarea id="traderMessage" rows="4" placeholder="Please type your message here..."></textarea>
+          </div>
+          <button class="btn btn-accent rounded-pill contact-submit" type="submit">
+            Send message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

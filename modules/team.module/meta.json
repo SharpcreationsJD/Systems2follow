@@ -1,0 +1,11 @@
+{
+    "global": false,
+    "icon": "font-awesome-5.14.0:USERS",
+    "host_template_types": [
+        "PAGE"
+    ],
+    "module_id": 99914,
+    "label": "Team Grid",
+    "is_available_for_new_content": true,
+    "content_tags": []
+}

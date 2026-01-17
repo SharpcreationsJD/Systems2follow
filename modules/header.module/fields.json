@@ -1,0 +1,139 @@
+[
+    {
+        "id": "logo",
+        "name": "logo",
+        "label": "Logo",
+        "type": "image",
+        "help_text": "Upload het bedrijfslogo (aanbevolen: SVG formaat voor beste kwaliteit)",
+        "default": {
+            "src": "/Systems2followTheme/images/logo-white.svg",
+            "alt": "Systems2follow",
+            "width": 180,
+            "height": 40
+        }
+    },
+    {
+        "id": "menu_items",
+        "name": "menu_items",
+        "label": "Menu Items",
+        "type": "group",
+        "help_text": "Voeg menu links toe aan de navigatiebalk",
+        "occurrence": {
+            "min": 1,
+            "max": 10
+        },
+        "children": [
+            {
+                "id": "link_text",
+                "name": "link_text",
+                "label": "Link Tekst",
+                "type": "text",
+                "default": "Menu Item"
+            },
+            {
+                "id": "link_url",
+                "name": "link_url",
+                "label": "Link URL",
+                "type": "link",
+                "default": {
+                    "url": {
+                        "href": "#"
+                    }
+                }
+            }
+        ],
+        "default": [
+            {
+                "link_text": "Systems",
+                "link_url": {
+                    "url": {
+                        "href": "#systems"
+                    }
+                }
+            },
+            {
+                "link_text": "Traders",
+                "link_url": {
+                    "url": {
+                        "href": "#traders"
+                    }
+                }
+            },
+            {
+                "link_text": "Resources",
+                "link_url": {
+                    "url": {
+                        "href": "#resources"
+                    }
+                }
+            },
+            {
+                "link_text": "About",
+                "link_url": {
+                    "url": {
+                        "href": "#about"
+                    }
+                }
+            },
+            {
+                "link_text": "Contact",
+                "link_url": {
+                    "url": {
+                        "href": "#contact"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "cta_button",
+        "name": "cta_button",
+        "label": "Login Knop",
+        "type": "group",
+        "help_text": "Instellingen voor de login/CTA knop rechts in de navigatie",
+        "children": [
+            {
+                "id": "text",
+                "name": "text",
+                "label": "Knop Tekst",
+                "type": "text",
+                "default": "Login"
+            },
+            {
+                "id": "url",
+                "name": "url",
+                "label": "Knop URL",
+                "type": "link",
+                "default": {
+                    "url": {
+                        "href": "/login"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "language_selector",
+        "name": "language_selector",
+        "label": "Taal Selector",
+        "type": "group",
+        "help_text": "Instellingen voor de taalkeuze dropdown",
+        "children": [
+            {
+                "id": "show_language",
+                "name": "show_language",
+                "label": "Toon Taal Selector",
+                "type": "boolean",
+                "default": true
+            },
+            {
+                "id": "current_language",
+                "name": "current_language",
+                "label": "Huidige Taal",
+                "type": "text",
+                "default": "EN"
+            }
+        ]
+    }
+]
+

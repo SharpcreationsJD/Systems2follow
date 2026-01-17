@@ -1,0 +1,62 @@
+{# 
+  ============================================================
+  MODULE: Milestones / Tijdlijn
+  ============================================================
+  BESCHRIJVING:
+  Horizontale slider met jaartallen en beschrijvingen.
+  
+  OPTIES:
+  - heading: Titel
+  - subtitle: Ondertitel
+  - milestones: Array van 3-12 items
+  
+  STYLING:
+  - Donkere achtergrond (#03251a)
+  - Groene jaarcards
+  - Horizontale scroll
+  ============================================================
+#}
+
+<section class="milestones-module">
+  <div class="container">
+    <div class="milestones-header">
+      <h2>{{ module.heading }}</h2>
+      {% if module.subtitle %}
+        <p>{{ module.subtitle }}</p>
+      {% endif %}
+    </div>
+    <div class="owl-carousel milestones-track">
+      {% for item in module.milestones %}
+        <article class="milestone-card">
+          <span class="milestone-year">{{ item.year }}</span>
+          <p>{{ item.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% require_js %}
+<script>
+  $(function () {
+    $(".milestones-track").owlCarousel({
+      items: 3,
+      margin: 18,
+      nav: true,
+      dots: false,
+      navText: [
+        "",
+        "<span class='owl-nav-btn'><i class='bi bi-chevron-right'></i></span>",
+      ],
+      responsive:  {
+        0: { items: 1 },
+        768: { items: 2 },
+        1200: { items: 3 },
+        1400: { items: 3 },
+        1500: { items: 3 },
+        1700: { items: 3 }
+      },
+    });
+  });
+</script>
+{% end_require_js %}

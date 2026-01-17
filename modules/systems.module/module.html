@@ -1,0 +1,117 @@
+{# 
+  ============================================================
+  MODULE: Trading Systemen Overzicht
+  ============================================================
+  BESCHRIJVING:
+  Tabelweergave van trading systemen met alle relevante data.
+  Inclusief zoekfunctie en risico indicatoren.
+  
+  OPTIES:
+  - heading: Sectie titel
+  - show_search: Toon/verberg zoekbalk
+  - search_placeholder: Zoekbalk tekst
+  - view_all_button: Knop naar overzichtspagina
+  - table_headers: Aanpasbare kolomtitels
+  - systems: Array van trading systemen
+  - theme: dark/light
+  
+  STYLING:
+  - Donker of licht thema
+  - Kleurindicatie voor positief/negatief
+  - Sparkline grafieken
+  - Responsive cards op mobiel
+  ============================================================
+#}
+
+{% set theme_class = module.theme == "light" ? "systems-module--light" : "" %}
+
+<section class="systems-module {{ theme_class }}">
+  <div class="container">
+    <div class="systems-header">
+      <div>
+        <h2>{{ module.heading }}</h2>
+        
+        {% if module.show_search %}
+          <div class="systems-search">
+            <span class="search-icon"><i class="bi bi-search"></i></span>
+            <input type="text" placeholder="{{ module.search_placeholder }}" aria-label="Search systems">
+            <button class="btn btn-accent btn-sm rounded-pill" type="button">Search</button>
+          </div>
+        {% endif %}
+      </div>
+      
+      {% if module.view_all_button.text %}
+        <a class="btn" href="{{ module.view_all_button.url.url.href }}">
+          {{ module.view_all_button.text }} <i class="bi bi-arrow-right"></i>
+        </a>
+      {% endif %}
+    </div>
+
+    {# Table Header #}
+    <div class="systems-table-header">
+      <span>{{ module.table_headers.system }}</span>
+      <span>{{ module.table_headers.trader }}</span>
+      <span>{{ module.table_headers.header_capital }}</span>
+      <span>{{ module.table_headers.yield_label }}</span>
+      <span>{{ module.table_headers.return_label }}</span>
+      <span>{{ module.table_headers.performance }}</span>
+      <span>{{ module.table_headers.risk }}</span>
+    </div>
+
+    {# Systems List #}
+    <div class="systems-list">
+      {% for system in module.systems %}
+        <article class="system-card">
+          <div class="system-cell system-main">
+            <div class="avatar"></div>
+            <div>
+              <div class="system-title">{{ system.name }}</div>
+              {% if system.badge %}
+                <span class="pill pill-good">{{ system.badge }}</span>
+              {% endif %}
+            </div>
+          </div>
+          
+          <div class="system-cell" data-label="{{ module.table_headers.trader }}">
+            <div class="traderinfo">
+              <div class="avatar avatar-sm"></div>
+              <div class="system-meta">{{ system.trader_name }}</div>
+            </div>
+          </div>
+          
+          <div class="system-cell system-meta" data-label="{{ module.table_headers.header_capital }}">
+            {{ system.system_capital }}
+          </div>
+          
+          <div class="system-cell" data-label="{{ module.table_headers.yield_label }}">
+            <span class="pill {{ system.yield_positive ? 'pill-good' : 'pill-bad' }}">
+              {{ system.yield_value }}
+            </span>
+          </div>
+          
+          <div class="system-cell" data-label="{{ module.table_headers.return_label }}">
+            <span class="pill {{ system.return_positive ? 'pill-good' : 'pill-bad' }}">
+              {{ system.return_value }}
+            </span>
+          </div>
+          
+          <div class="system-cell" data-label="{{ module.table_headers.performance }}">
+            <svg class="sparkline" viewBox="0 0 120 40" aria-hidden="true">
+              {% if system.return_positive %}
+                <polyline fill="none" stroke="#12b981" stroke-width="3" points="0,32 12,28 24,20 36,24 48,12 60,18 72,10 84,16 96,6 108,12 120,8"/>
+              {% else %}
+                <polyline fill="none" stroke="#ff6b63" stroke-width="3" points="0,10 12,16 24,12 36,18 48,26 60,22 72,30 84,28 96,34 108,30 120,36"/>
+              {% endif %}
+            </svg>
+          </div>
+          
+          <div class="system-cell" data-label="{{ module.table_headers.risk }}">
+            <span class="risk-pill {{ system.risk_level <= 3 ? 'risk-good' : 'risk-bad' }}">
+              {{ system.risk_level }}
+            </span>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

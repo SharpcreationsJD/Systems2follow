@@ -1,0 +1,259 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "Discover trusted systems, managed by professionals"
+    },
+    {
+        "id": "show_search",
+        "name": "show_search",
+        "label": "Toon Zoekbalk",
+        "type": "boolean",
+        "default": true
+    },
+    {
+        "id": "search_placeholder",
+        "name": "search_placeholder",
+        "label": "Zoekbalk Placeholder",
+        "type": "text",
+        "default": "Zoek systemen..."
+    },
+    {
+        "id": "view_all_button",
+        "name": "view_all_button",
+        "label": "Bekijk Alle Knop",
+        "type": "group",
+        "children": [
+            {
+                "id": "text",
+                "name": "text",
+                "label": "Knop Tekst",
+                "type": "text",
+                "default": "View all"
+            },
+            {
+                "id": "url",
+                "name": "url",
+                "label": "Knop URL",
+                "type": "link",
+                "default": {
+                    "url": {
+                        "href": "/systems"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "table_headers",
+        "name": "table_headers",
+        "label": "Tabel Headers",
+        "type": "group",
+        "children": [
+            {
+                "id": "system",
+                "name": "system",
+                "label": "Systeem",
+                "type": "text",
+                "default": "System"
+            },
+            {
+                "id": "trader",
+                "name": "trader",
+                "label": "Trader",
+                "type": "text",
+                "default": "Trader"
+            },
+            {
+                "id": "header_capital",
+                "name": "header_capital",
+                "label": "Kapitaal",
+                "type": "text",
+                "default": "Req. Capital"
+            },
+            {
+                "id": "yield_label",
+                "name": "yield_label",
+                "label": "Rendement",
+                "type": "text",
+                "default": "Yield"
+            },
+            {
+                "id": "return_label",
+                "name": "return_label",
+                "label": "Return",
+                "type": "text",
+                "default": "Return"
+            },
+            {
+                "id": "performance",
+                "name": "performance",
+                "label": "Performance",
+                "type": "text",
+                "default": "Performance"
+            },
+            {
+                "id": "risk",
+                "name": "risk",
+                "label": "Risico",
+                "type": "text",
+                "default": "Risk"
+            }
+        ]
+    },
+    {
+        "id": "systems",
+        "name": "systems",
+        "label": "Trading Systemen",
+        "type": "group",
+        "help_text": "Voeg trading systemen toe aan de tabel",
+        "occurrence": {
+            "min": 1,
+            "max": 20
+        },
+        "children": [
+            {
+                "id": "factor_name",
+                "name": "factor_name",
+                "label": "Systeem Naam",
+                "type": "text",
+                "default": "System Name"
+            },
+            {
+                "id": "badge",
+                "name": "badge",
+                "label": "Badge",
+                "type": "text",
+                "help_text": "Laat leeg voor geen badge",
+                "default": "Top system"
+            },
+            {
+                "id": "trader_name",
+                "name": "trader_name",
+                "label": "Trader Naam",
+                "type": "text",
+                "default": "Trader Name"
+            },
+            {
+                "id": "system_capital",
+                "name": "system_capital",
+                "label": "Vereist Kapitaal",
+                "type": "text",
+                "default": "€12,000"
+            },
+            {
+                "id": "yield_value",
+                "name": "yield_value",
+                "label": "Yield Percentage",
+                "type": "text",
+                "default": "+18.35%"
+            },
+            {
+                "id": "yield_positive",
+                "name": "yield_positive",
+                "label": "Yield Positief",
+                "type": "boolean",
+                "default": true
+            },
+            {
+                "id": "return_value",
+                "name": "return_value",
+                "label": "Return Percentage",
+                "type": "text",
+                "default": "+132.55%"
+            },
+            {
+                "id": "return_positive",
+                "name": "return_positive",
+                "label": "Return Positief",
+                "type": "boolean",
+                "default": true
+            },
+            {
+                "id": "risk_level",
+                "name": "risk_level",
+                "label": "Risico Niveau (1-7)",
+                "type": "number",
+                "min": 1,
+                "max": 7,
+                "default": 2
+            },
+            {
+                "id": "link",
+                "name": "link",
+                "label": "Detail Pagina Link",
+                "type": "link",
+                "default": {
+                    "url": {
+                        "href": "#"
+                    }
+                }
+            }
+        ],
+        "default": [
+            {
+                "name": "Alpha Growth System",
+                "badge": "Top system",
+                "trader_name": "John Mitchell",
+                "capital": "â‚¬12,000",
+                "yield_value": "+18.35%",
+                "yield_positive": true,
+                "return_value": "+132.55%",
+                "return_positive": true,
+                "risk_level": 2
+            },
+            {
+                "name": "Conservative Income",
+                "badge": "",
+                "trader_name": "Sarah Williams",
+                "capital": "â‚¬8,000",
+                "yield_value": "-3.35%",
+                "yield_positive": false,
+                "return_value": "-35.35%",
+                "return_positive": false,
+                "risk_level": 4
+            },
+            {
+                "name": "Momentum Trader Pro",
+                "badge": "Top system",
+                "trader_name": "Michael Chen",
+                "capital": "â‚¬15,000",
+                "yield_value": "+24.50%",
+                "yield_positive": true,
+                "return_value": "+186.20%",
+                "return_positive": true,
+                "risk_level": 3
+            },
+            {
+                "name": "Steady Returns Fund",
+                "badge": "",
+                "trader_name": "Emma Davis",
+                "capital": "â‚¬10,000",
+                "yield_value": "+12.75%",
+                "yield_positive": true,
+                "return_value": "+95.40%",
+                "return_positive": true,
+                "risk_level": 2
+            }
+        ]
+    },
+    {
+        "id": "theme",
+        "name": "theme",
+        "label": "Thema",
+        "type": "choice",
+        "choices": [
+            [
+                "dark",
+                "Donker"
+            ],
+            [
+                "light",
+                "Licht"
+            ]
+        ],
+        "default": "dark"
+    }
+]

@@ -1,0 +1,445 @@
+<!--
+  templateType: page
+  label: Systems2follow - Module Overzicht
+  isAvailableForNewContent: true
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+{# 
+  ============================================================
+  MODULE OVERZICHT TEMPLATE
+  ============================================================
+  Dit template toont alle beschikbare modules met hun naam
+  en een preview. Handig om te zien wat elke module doet.
+  ============================================================
+#}
+
+<header class="overview-header">
+  <div class="container">
+    <h1>Systems2follow - Module Overzicht</h1>
+    <p>Hieronder vind je alle beschikbare modules voor dit thema. Klik op een module om naar de sectie te scrollen.</p>
+  </div>
+</header>
+
+<nav class="module-nav">
+  <div class="container">
+    <ul>
+      <li><a href="#header-module">Header</a></li>
+      <li><a href="#hero-module">Hero</a></li>
+      <li><a href="#intro-module">Intro</a></li>
+      <li><a href="#how-it-works-module">How It Works</a></li>
+      <li><a href="#confidence-module">Confidence</a></li>
+      <li><a href="#trust-module">Trust</a></li>
+      <li><a href="#systems-module">Systems</a></li>
+      <li><a href="#calculator-module">Calculator</a></li>
+      <li><a href="#testimonials-module">Testimonials</a></li>
+      <li><a href="#news-module">News</a></li>
+      <li><a href="#faq-module">FAQ</a></li>
+      <li><a href="#dedicated-module">Dedicated</a></li>
+      <li><a href="#sub-header-module">Sub Header</a></li>
+      <li><a href="#story-module">Story</a></li>
+      <li><a href="#formula-module">Formula</a></li>
+      <li><a href="#expectations-module">Expectations</a></li>
+      <li><a href="#team-module">Team</a></li>
+      <li><a href="#trader-contact-module">Trader Contact</a></li>
+      <li><a href="#milestones-module">Milestones</a></li>
+      <li><a href="#webinar-module">Webinar</a></li>
+      <li><a href="#pricing-module">Pricing</a></li>
+      <li><a href="#system-single-module">System Single</a></li>
+      <li><a href="#news-light-module">News (Light)</a></li>
+      <li><a href="#contact-form-module">Contact Form</a></li>
+      <li><a href="#footer-module">Footer</a></li>
+    </ul>
+  </div>
+</nav>
+
+{# 1. HEADER MODULE #}
+<section class="module-section" id="header-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">01</span>
+      <h2>Header - Navigatiebalk</h2>
+      <p>Vaste navigatiebalk met logo, menu links, login knop en taalkeuze.</p>
+    </div>
+  </div>
+  {% module "demo_header" path="/Systems2followTheme/modules/header.module" %}
+</section>
+
+{# 2. HERO MODULE #}
+<section class="module-section" id="hero-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">02</span>
+      <h2>Hero Banner</h2>
+      <p>Grote banner met titel, ondertitel en CTA knop. Achtergrondafbeelding met gradient.</p>
+    </div>
+  </div>
+  {% module "demo_hero" path="/Systems2followTheme/modules/hero.module" %}
+</section>
+
+{# 3. INTRO MODULE #}
+<section class="module-section" id="intro-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">03</span>
+      <h2>Intro Sectie</h2>
+      <p>Twee-koloms sectie met titel, tekst en afbeelding. Afbeelding links of rechts.</p>
+    </div>
+  </div>
+  {% module "demo_intro" path="/Systems2followTheme/modules/intro.module" %}
+</section>
+
+{# 4. HOW IT WORKS MODULE #}
+<section class="module-section" id="how-it-works-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">04</span>
+      <h2>Hoe Het Werkt</h2>
+      <p>Stappen uitleg met ronde afbeeldingen. 2-6 stappen configureerbaar.</p>
+    </div>
+  </div>
+  {% module "demo_how_it_works" path="/Systems2followTheme/modules/how-it-works.module" %}
+</section>
+
+{# 5. CONFIDENCE MODULE #}
+<section class="module-section" id="confidence-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">05</span>
+      <h2>Vertrouwen Sectie</h2>
+      <p>Split layout met tekst links en afbeelding rechts. Groene titel.</p>
+    </div>
+  </div>
+  {% module "demo_confidence" path="/Systems2followTheme/modules/confidence.module" %}
+</section>
+
+{# 6. TRUST MODULE #}
+<section class="module-section" id="trust-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">06</span>
+      <h2>Professionals Sectie</h2>
+      <p>Trust indicators met highlights lijst. Afbeelding links, content rechts.</p>
+    </div>
+  </div>
+  {% module "demo_trust" path="/Systems2followTheme/modules/trust.module" %}
+</section>
+
+{# 7. SYSTEMS MODULE #}
+<section class="module-section" id="systems-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">07</span>
+      <h2>Trading Systemen</h2>
+      <p>Tabel overzicht van trading systemen met zoekfunctie en risico indicators.</p>
+    </div>
+  </div>
+  {% module "demo_systems" path="/Systems2followTheme/modules/systems.module" %}
+</section>
+
+{# 8. CALCULATOR MODULE #}
+<section class="module-section" id="calculator-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">08</span>
+      <h2>Investering Calculator</h2>
+      <p>Interactieve calculator met sliders voor bedrag en periode. Live berekening.</p>
+    </div>
+  </div>
+  {% module "demo_calculator" path="/Systems2followTheme/modules/calculator.module" %}
+</section>
+
+{# 9. TESTIMONIALS MODULE #}
+<section class="module-section" id="testimonials-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">09</span>
+      <h2>Klantbeoordelingen</h2>
+      <p>Slider met klantreviews. Sterren rating, naam en functie.</p>
+    </div>
+  </div>
+  {% module "demo_testimonials" path="/Systems2followTheme/modules/testimonials.module" %}
+</section>
+
+{# 10. NEWS MODULE #}
+<section class="module-section" id="news-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">10</span>
+      <h2>Nieuws & Insights</h2>
+      <p>Tabbladen interface voor nieuws artikelen. Interactieve tabs met cards.</p>
+    </div>
+  </div>
+  {% module "demo_news" path="/Systems2followTheme/modules/news.module" %}
+</section>
+
+{# 11. FAQ MODULE #}
+<section class="module-section" id="faq-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">11</span>
+      <h2>Veelgestelde Vragen</h2>
+      <p>Accordion FAQ met categorieÃ«n. Uitklapbare vragen met antwoorden.</p>
+    </div>
+  </div>
+  {% module "demo_faq" path="/Systems2followTheme/modules/faq.module" %}
+</section>
+
+{# 12. DEDICATED MODULE #}
+<section class="module-section" id="dedicated-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">12</span>
+      <h2>Download CTA</h2>
+      <p>Call-to-action sectie voor lead generation. Download knop met afbeelding.</p>
+    </div>
+  </div>
+  {% module "demo_dedicated" path="/Systems2followTheme/modules/dedicated.module" %}
+</section>
+
+{# 13. SUB HEADER MODULE #}
+<section class="module-section" id="sub-header-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">13</span>
+      <h2>Sub Header</h2>
+      <p>Eenvoudige pagina titel sectie met broodkruimels.</p>
+    </div>
+  </div>
+  {% module "demo_subheader" path="/Systems2followTheme/modules/sub-header.module" %}
+</section>
+
+{# 14. STORY MODULE #}
+<section class="module-section" id="story-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">14</span>
+      <h2>Story Sectie</h2>
+      <p>Onze verhaal sectie met tekst en afbeelding.</p>
+    </div>
+  </div>
+  {% module "demo_story" path="/Systems2followTheme/modules/story.module" %}
+</section>
+
+{# 15. FORMULA MODULE #}
+<section class="module-section" id="formula-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">15</span>
+      <h2>Formula Cards</h2>
+      <p>Kaarten met stappen of formule uitleg (1-3).</p>
+    </div>
+  </div>
+  {% module "demo_formula" path="/Systems2followTheme/modules/formula.module" %}
+</section>
+
+{# 16. EXPECTATIONS MODULE #}
+<section class="module-section" id="expectations-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">16</span>
+      <h2>Expectations</h2>
+      <p>Lijst met verwachtingen/features en een afbeelding.</p>
+    </div>
+  </div>
+  {% module "demo_expectations" path="/Systems2followTheme/modules/expectations.module" %}
+</section>
+
+
+{# 17. TEAM MODULE #}
+<section class="module-section" id="team-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">17</span>
+      <h2>Team Grid</h2>
+      <p>Grid met teamleden, foto's, rollen en social links.</p>
+    </div>
+  </div>
+  {% module "demo_team" path="/Systems2followTheme/modules/team.module" %}
+</section>
+
+{# 18. TRADER CONTACT MODULE #}
+<section class="module-section" id="trader-contact-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">18</span>
+      <h2>Trader Contact Form</h2>
+      <p>Contactformulier voor nieuwe traders werving.</p>
+    </div>
+  </div>
+  {% module "demo_trader_contact" path="/Systems2followTheme/modules/trader-contact.module" %}
+</section>
+
+{# 19. MILESTONES MODULE #}
+<section class="module-section" id="milestones-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">19</span>
+      <h2>Milestones Tijdlijn</h2>
+      <p>Slider met jaartallen en mijlpalen.</p>
+    </div>
+  </div>
+  {% module "demo_milestones" path="/Systems2followTheme/modules/milestones.module" %}
+</section>
+
+{# 20. WEBINAR MODULE #}
+<section class="module-section" id="webinar-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">20</span>
+      <h2>Webinar Grid</h2>
+      <p>Overzicht van webinars met cards.</p>
+    </div>
+  </div>
+  {% module "demo_webinar" path="/Systems2followTheme/modules/webinar.module" %}
+</section>
+
+{# 21. PRICING MODULE #}
+<section class="module-section" id="pricing-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">21</span>
+      <h2>Pricing Calculator</h2>
+      <p>Abonnement prijzen calculator met sliders.</p>
+    </div>
+  </div>
+  {% module "demo_pricing" path="/Systems2followTheme/modules/pricing.module" %}
+</section>
+
+{# 22. SYSTEM SINGLE MODULE #}
+<section class="module-section" id="system-single-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">22</span>
+      <h2>System Detail</h2>
+      <p>Detail weergave van een systeem (normaal gebruikt op detail pagina).</p>
+    </div>
+  </div>
+  {% module "demo_system_single" path="/Systems2followTheme/modules/system-single.module" %}
+</section>
+
+{# 23. NEWS LIGHT MODULE #}
+<section class="module-section" id="news-light-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">23</span>
+      <h2>News (Light)</h2>
+      <p>Lichte variant van de nieuws module.</p>
+    </div>
+  </div>
+  {% module "demo_news_light" path="/Systems2followTheme/modules/news-light.module" %}
+</section>
+
+{# 24. CONTACT FORM MODULE #}
+<section class="module-section" id="contact-form-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">24</span>
+      <h2>Contact Formulier</h2>
+      <p>Standaard contactformulier met optionele afbeelding.</p>
+    </div>
+  </div>
+  {% module "demo_contact_form" path="/Systems2followTheme/modules/contact-form.module" %}
+</section>
+
+{# 25. FOOTER MODULE #}
+<section class="module-section" id="footer-module">
+  <div class="container">
+    <div class="module-label">
+      <span class="module-number">25</span>
+      <h2>Footer</h2>
+      <p>Website footer met logo, menu kolommen, nieuwsbrief en social links.</p>
+    </div>
+  </div>
+  {% module "demo_footer" path="/Systems2followTheme/modules/footer.module" %}
+</section>
+
+<style>
+  .overview-header {
+    background: #03251a;
+    color: #ffffff;
+    padding: 120px 0 60px;
+    text-align: center;
+  }
+  
+  .overview-header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .overview-header p {
+    font-size: 18px;
+    color: #d1ded9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .module-nav {
+    background: #002317;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .module-nav ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .module-nav a {
+    color: #d1ded9;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    transition: all 0.2s;
+  }
+  
+  .module-nav a:hover {
+    background: #08ba7c;
+    color: #ffffff;
+  }
+  
+  .module-section {
+    border-bottom: 1px solid #e1e8e5;
+  }
+  
+  .module-label {
+    padding: 60px 0 40px;
+    text-align: center;
+  }
+  
+  .module-number {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: #08ba7c;
+    color: #ffffff;
+    border-radius: 50%;
+    line-height: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  
+  .module-label h2 {
+    font-size: 32px;
+    color: #002317;
+    margin-bottom: 8px;
+  }
+  
+  .module-label p {
+    color: #4e5f5f;
+    font-size: 16px;
+  }
+</style>
+{% endblock body %}
+
+

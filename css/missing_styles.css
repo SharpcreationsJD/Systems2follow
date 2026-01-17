@@ -1,0 +1,93 @@
+/* Contact Form Styles - Restored from Source */
+.contact-form label {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    display: block;
+    color: #021a1a;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border-radius: 50px;
+    border: 1px solid #e3e6e5;
+    padding: 22px 24px;
+    font-size: 18px;
+}
+
+.contact-form textarea {
+    border-radius: 14px;
+    resize: vertical;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-area {
+    margin-bottom: 16px;
+}
+
+.contact-submit {
+    background: #08ba7c;
+    border: none;
+    padding: 12px 22px;
+    width: auto;
+    /* Ensure button isn't full width if not desired */
+}
+
+.contact-submit:hover,
+.contact-submit:focus {
+    background: #08ba7c;
+    color: #ffffff;
+}
+
+/* Trader Contact Background & Card Layering */
+.trader-contact {
+    position: relative;
+    /* background: #fff; (Already in main.css potentially) */
+}
+
+.trader-contact::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: url(../images/dedicated-section.jpg) center / cover no-repeat;
+    z-index: 1;
+}
+
+.contact-card {
+    /* Restore styles from source that might be missing */
+    background: #f2f4f4;
+    border-radius: 25px;
+    padding: 70px;
+    /* max-width is 100% in main.css, but source says 750px. 
+       We leave max-width 100% to fill container in new layout, 
+       but add padding/bg/z-index */
+    z-index: 9;
+    position: relative;
+}
+
+/* Mobile Adjustments for Form */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 40px 24px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trader-contact::after {
+        display: none;
+        /* Often hidden on mobile or adjusted */
+    }
+}

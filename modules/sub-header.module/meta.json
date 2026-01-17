@@ -1,0 +1,31 @@
+{
+    "label":  "Pagina Header",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "heading",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Sub-Header / Pagina Header",
+                          "description":  "Eenvoudige header sectie voor subpagina\u0027s. Donkere achtergrond met gecentreerde titel.",
+                          "features":  [
+                                           "Gecentreerde paginatitel",
+                                           "Donkere achtergrond",
+                                           "Compacte hoogte"
+                                       ]
+                      }
+}

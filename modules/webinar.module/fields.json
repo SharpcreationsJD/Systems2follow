@@ -1,0 +1,108 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "Join a Webinar"
+    },
+    {
+        "id": "description",
+        "name": "description",
+        "label": "Beschrijving",
+        "type": "text",
+        "default": "Learn directly from professional traders and investment experts. Our live webinars walk you through system trading, risk management, and market insights."
+    },
+    {
+        "id": "webinars",
+        "name": "webinars",
+        "label": "Webinars",
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "max": 8
+        },
+        "children": [
+            {
+                "id": "image",
+                "name": "image",
+                "label": "Afbeelding",
+                "type": "image",
+                "default": {
+                    "src": "",
+                    "alt": "Webinar image"
+                }
+            },
+            {
+                "id": "title",
+                "name": "title",
+                "label": "Titel",
+                "type": "text",
+                "default": "Webinar Title"
+            },
+            {
+                "id": "date",
+                "name": "date",
+                "label": "Datum",
+                "type": "text",
+                "default": "17 June"
+            },
+            {
+                "id": "link",
+                "name": "link",
+                "label": "Registratie Link",
+                "type": "link",
+                "default": {
+                    "url": {
+                        "href": "#"
+                    }
+                }
+            },
+            {
+                "id": "link_text",
+                "name": "link_text",
+                "label": "Link Tekst",
+                "type": "text",
+                "default": "Register"
+            }
+        ],
+        "default": [
+            {
+                "title": "System2follow Intro",
+                "date": "17 June",
+                "link_text": "Register",
+                "image": {
+                    "src": "",
+                    "alt": "Webinar"
+                }
+            },
+            {
+                "title": "Investing Intro",
+                "date": "23 June",
+                "link_text": "Register",
+                "image": {
+                    "src": "",
+                    "alt": "Webinar"
+                }
+            },
+            {
+                "title": "Traders Intro",
+                "date": "17 August",
+                "link_text": "Register",
+                "image": {
+                    "src": "",
+                    "alt": "Webinar"
+                }
+            },
+            {
+                "title": "System2follow Intro",
+                "date": "02 September",
+                "link_text": "Register",
+                "image": {
+                    "src": "",
+                    "alt": "Webinar"
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,119 @@
+[
+    {
+        "id": "system_name",
+        "name": "system_name",
+        "label": "Systeem Naam",
+        "type": "text",
+        "default": "RVM Retirement"
+    },
+    {
+        "id": "overview",
+        "name": "overview",
+        "label": "Overview Gegevens",
+        "type": "group",
+        "children": [
+            {
+                "id": "trader_name",
+                "name": "trader_name",
+                "label": "Trader Naam",
+                "type": "text",
+                "default": "Trader Name"
+            },
+            {
+                "id": "required_capital",
+                "name": "required_capital",
+                "label": "Benodigd Kapitaal",
+                "type": "text",
+                "default": "EUR 12,000"
+            },
+            {
+                "id": "instruments",
+                "name": "instruments",
+                "label": "Instrumenten (komma-gescheiden)",
+                "type": "text",
+                "default": "Shares, Options"
+            },
+            {
+                "id": "risk_indicator",
+                "name": "risk_indicator",
+                "label": "Risico Indicator (1-7)",
+                "type": "number",
+                "default": 2
+            },
+            {
+                "id": "efficiency_current",
+                "name": "efficiency_current",
+                "label": "Rendement Huidige Maand",
+                "type": "text",
+                "default": "+18.35%"
+            },
+            {
+                "id": "efficiency_avg",
+                "name": "efficiency_avg",
+                "label": "Gemiddeld per Jaar",
+                "type": "text",
+                "default": "+132.35%"
+            },
+            {
+                "id": "efficiency_total",
+                "name": "efficiency_total",
+                "label": "Totaal Sinds Start",
+                "type": "text",
+                "default": "+132.35%"
+            },
+            {
+                "id": "start_date",
+                "name": "start_date",
+                "label": "Start Datum",
+                "type": "text",
+                "default": "January 2019"
+            }
+        ]
+    },
+    {
+        "id": "about_title",
+        "name": "about_title",
+        "label": "Over Titel",
+        "type": "text",
+        "default": "About the system:"
+    },
+    {
+        "id": "about_text",
+        "name": "about_text",
+        "label": "Over Tekst (kort)",
+        "type": "richtext",
+        "default": "<p>Consistent strong performance since launch with solid returns year over year.</p>"
+    },
+    {
+        "id": "description_title",
+        "name": "description_title",
+        "label": "Beschrijving Titel",
+        "type": "text",
+        "default": "RVM Retirement"
+    },
+    {
+        "id": "description_text",
+        "name": "description_text",
+        "label": "Uitgebreide Beschrijving",
+        "type": "richtext",
+        "default": "<p>Long-term investment strategy designed for building and carefully managing a pension portfolio.</p>"
+    },
+    {
+        "id": "cta_text",
+        "name": "cta_text",
+        "label": "CTA Knop Tekst",
+        "type": "text",
+        "default": "Invest now"
+    },
+    {
+        "id": "cta_link",
+        "name": "cta_link",
+        "label": "CTA Link",
+        "type": "link",
+        "default": {
+            "url": {
+                "href": "#pricing"
+            }
+        }
+    }
+]

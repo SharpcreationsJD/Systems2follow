@@ -1,0 +1,55 @@
+{# 
+  ============================================================
+  MODULE: Intro Sectie
+  ============================================================
+  BESCHRIJVING:
+  Twee-koloms introductiesectie met tekstcontent en afbeelding.
+  Wordt gebruikt om het bedrijf of product te introduceren.
+  
+  OPTIES:
+  - heading: Titel met HTML ondersteuning voor accenten
+  - lead_text: Korte introductietekst
+  - body_text: Uitgebreide beschrijving
+  - image: Afbeelding met alt tekst
+  - image_position: Links of rechts
+  
+  STYLING:
+  - Donkere achtergrond (#03251a)
+  - Afbeelding met afgeronde hoeken
+  - Responsive layout
+  ============================================================
+#}
+
+{% set is_reversed = module.image_position == "left" %}
+
+<section class="intro-section">
+  <div class="container">
+    <div class="row align-items-center justify-content-between {% if is_reversed %}flex-row-reverse{% endif %}">
+      <div class="col-lg-6">
+        <h2 class="section-title">{{ module.heading }}</h2>
+        
+        {% if module.lead_text %}
+          <p class="section-lead">{{ module.lead_text }}</p>
+        {% endif %}
+        
+        {% if module.body_text %}
+          <div class="section-body">{{ module.body_text }}</div>
+        {% endif %}
+      </div>
+      
+      <div class="col-lg-5">
+        <div class="image-card">
+          {% if module.image.src %}
+            {% set img_src = module.image.src %}
+            {% if img_src is string_startingwith "/" %}
+              {% set img_src = get_asset_url(img_src) %}
+            {% endif %}
+            <img src="{{ img_src }}" alt="{{ module.image.alt }}" class="img-fluid">
+          {% else %}
+            <img src="{{ get_asset_url('/Systems2followTheme/images/section-intro.png') }}" alt="Intro" class="img-fluid">
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

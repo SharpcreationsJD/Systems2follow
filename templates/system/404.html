@@ -1,0 +1,31 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: false
+  label: Systems2follow - 404 Error
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+  {% module "header" path="/Systems2followTheme/modules/header.module" %}
+  
+  {% module "hero_404" 
+     path="/Systems2followTheme/modules/hero.module",
+     heading={
+       "line1": "404",
+       "line2": "Page Not Found"
+     },
+     subtitle="Oops! De pagina die je zoekt bestaat niet of is verplaatst.",
+     cta_button={
+       "text": "Terug naar Home",
+       "url": { "href": "/" },
+       "show_arrow": true
+     },
+     height="medium"
+  %}
+
+  <div class="container py-5 text-center">
+      <p>Mogelijk heb je een typfout gemaakt of is de pagina verwijderd.</p>
+  </div>
+  
+  {% module "footer" path="/Systems2followTheme/modules/footer.module" %}
+{% endblock body %}

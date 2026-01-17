@@ -1,0 +1,77 @@
+[
+    {
+        "name": "heading",
+        "label": "Heading",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Meet our team members"
+    },
+    {
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit volutpat gravida malesuada quam commodo id integer nam."
+    },
+    {
+        "name": "members",
+        "label": "Team Members",
+        "required": false,
+        "locked": false,
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "max": 50,
+            "sorting_label_field": "member_name",
+            "default": 6
+        },
+        "children": [
+            {
+                "name": "member_name",
+                "label": "Name",
+                "type": "text",
+                "default": "John Carter"
+            },
+            {
+                "name": "role",
+                "label": "Role",
+                "type": "text",
+                "default": "CEO & Co-Founder"
+            },
+            {
+                "name": "photo",
+                "label": "Photo",
+                "type": "image"
+            },
+            {
+                "name": "social_links",
+                "label": "Social Links",
+                "type": "group",
+                "children": [
+                    {
+                        "name": "facebook",
+                        "label": "Facebook URL",
+                        "type": "text"
+                    },
+                    {
+                        "name": "twitter",
+                        "label": "Twitter/X URL",
+                        "type": "text"
+                    },
+                    {
+                        "name": "instagram",
+                        "label": "Instagram URL",
+                        "type": "text"
+                    },
+                    {
+                        "name": "linkedin",
+                        "label": "LinkedIn URL",
+                        "type": "text"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,34 @@
+{
+    "label":  "Klantbeoordelingen",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "quote",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Klantbeoordelingen Slider",
+                          "description":  "Carousel van klantreviews met sterren rating. Inclusief naam en functie van de reviewer. Automatisch responsive slider.",
+                          "features":  [
+                                           "Titel en ondertitel",
+                                           "3-12 reviews mogelijk",
+                                           "Sterren rating (1-5)",
+                                           "Auteur naam + functie",
+                                           "Responsive slider (1/2/3 items)",
+                                           "Optioneel autoplay"
+                                       ]
+                      }
+}

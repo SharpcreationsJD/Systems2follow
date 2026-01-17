@@ -1,0 +1,162 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "News and insights"
+    },
+    {
+        "id": "subtitle",
+        "name": "subtitle",
+        "label": "Ondertitel",
+        "type": "text",
+        "default": "Stay updated with the latest market news, platform updates, and investment insights."
+    },
+    {
+        "id": "tabs",
+        "name": "tabs",
+        "label": "Tabbladen",
+        "type": "group",
+        "occurrence": {
+            "min": 2,
+            "max": 6
+        },
+        "children": [
+            {
+                "id": "factor_name",
+                "name": "factor_name",
+                "label": "Tab Naam",
+                "type": "text",
+                "default": "Tab"
+            },
+            {
+                "id": "articles",
+                "name": "articles",
+                "label": "Artikelen",
+                "type": "group",
+                "occurrence": {
+                    "min": 1,
+                    "max": 8
+                },
+                "children": [
+                    {
+                        "id": "image",
+                        "name": "image",
+                        "label": "Afbeelding",
+                        "type": "image",
+                        "default": {
+                            "src": "",
+                            "alt": "Article image"
+                        }
+                    },
+                    {
+                        "id": "badge",
+                        "name": "badge",
+                        "label": "Badge",
+                        "type": "text",
+                        "default": ""
+                    },
+                    {
+                        "id": "title",
+                        "name": "title",
+                        "label": "Titel",
+                        "type": "text",
+                        "default": "Article title"
+                    },
+                    {
+                        "id": "excerpt",
+                        "name": "excerpt",
+                        "label": "Samenvatting",
+                        "type": "text",
+                        "default": "Short description"
+                    },
+                    {
+                        "id": "link",
+                        "name": "link",
+                        "label": "Link",
+                        "type": "link",
+                        "default": {
+                            "url": {
+                                "href": "#"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "default": [
+            {
+                "name": "Market Updates",
+                "articles": [
+                    {
+                        "title": "Q4 Market Outlook",
+                        "excerpt": "Our analysis of expected market movements in the upcoming quarter.",
+                        "badge": "Featured"
+                    },
+                    {
+                        "title": "New Trading System Launch",
+                        "excerpt": "Introducing our latest algorithmic trading system with proven results.",
+                        "badge": ""
+                    },
+                    {
+                        "title": "Risk Management Tips",
+                        "excerpt": "Essential strategies for managing your investment portfolio risk.",
+                        "badge": ""
+                    },
+                    {
+                        "title": "Platform Updates",
+                        "excerpt": "Latest improvements and new features on the Systems2follow platform.",
+                        "badge": ""
+                    }
+                ]
+            },
+            {
+                "name": "Research",
+                "articles": [
+                    {
+                        "title": "Annual Performance Report",
+                        "excerpt": "Comprehensive analysis of all trading systems performance in 2024.",
+                        "badge": "New"
+                    }
+                ]
+            },
+            {
+                "name": "Insights",
+                "articles": [
+                    {
+                        "title": "Beginner's Guide",
+                        "excerpt": "Everything you need to know to start with automated trading.",
+                        "badge": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cta_button",
+        "name": "cta_button",
+        "label": "CTA Knop",
+        "type": "group",
+        "children": [
+            {
+                "id": "text",
+                "name": "text",
+                "label": "Knop Tekst",
+                "type": "text",
+                "default": "Read all posts"
+            },
+            {
+                "id": "url",
+                "name": "url",
+                "label": "Knop URL",
+                "type": "link",
+                "default": {
+                    "url": {
+                        "href": "/blog"
+                    }
+                }
+            }
+        ]
+    }
+]

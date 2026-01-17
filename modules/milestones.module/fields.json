@@ -1,0 +1,60 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "Our Milestones"
+    },
+    {
+        "id": "subtitle",
+        "name": "subtitle",
+        "label": "Ondertitel",
+        "type": "text",
+        "default": "A journey built on innovation, experience, and passion:"
+    },
+    {
+        "id": "milestones",
+        "name": "milestones",
+        "label": "Mijlpalen",
+        "type": "group",
+        "occurrence": {
+            "min": 3,
+            "max": 12
+        },
+        "children": [
+            {
+                "id": "year",
+                "name": "year",
+                "label": "Jaar",
+                "type": "text",
+                "default": "2020"
+            },
+            {
+                "id": "description",
+                "name": "description",
+                "label": "Beschrijving",
+                "type": "text",
+                "default": "Milestone description"
+            }
+        ],
+        "default": [
+            {
+                "year": "2019",
+                "description": "Traderswinkel becomes Systems2follow"
+            },
+            {
+                "year": "2015",
+                "description": "Launch of Tradershop, the first website where investors follow professional traders"
+            },
+            {
+                "year": "2012",
+                "description": "Introduction of trading systems that investors can follow automatically"
+            },
+            {
+                "year": "2008",
+                "description": "Ruud Hoefnagels begins building the first trading platform"
+            }
+        ]
+    }
+]

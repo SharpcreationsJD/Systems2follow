@@ -1,0 +1,133 @@
+{# 
+  ============================================================
+  MODULE: Investering Calculator
+  ============================================================
+  BESCHRIJVING:
+  Interactieve calculator voor rendement berekening.
+  Sliders voor bedrag en periode, live resultaat.
+  
+  OPTIES:
+  - heading: Sectie titel
+  - lead_text: Korte intro
+  - body_text: Beschrijving
+  - calculator_title: Titel boven calculator
+  - amount_slider: Min/max/default voor bedrag
+  - period_slider: Min/max/default voor periode
+  - expected_return_label: Label voor resultaat
+  - average_yield: Percentage voor berekening
+  
+  STYLING:
+  - Donkere achtergrond
+  - Witte calculator card
+  - Custom sliders
+  ============================================================
+#}
+
+<section class="calculator-module">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="calculator-card">
+          <h3>{{ module.calculator_title }}</h3>
+          
+          <div class="calc-panel">
+            <label class="calc-label" for="investmentAmount-{{ name }}">
+              {{ module.amount_slider.amount_label }}
+            </label>
+            <input 
+              class="calc-range-input" 
+              id="investmentAmount-{{ name }}" 
+              type="range" 
+              min="{{ module.amount_slider.amount_min }}" 
+              max="{{ module.amount_slider.amount_max }}" 
+              value="{{ module.amount_slider.amount_default }}"
+              data-type="amount"
+            >
+            <div class="calc-value" id="amountDisplay-{{ name }}">
+              &euro; {{ module.amount_slider.amount_default|format_number }}
+            </div>
+          </div>
+          
+          <div class="calc-panel">
+            <label class="calc-label" for="investmentPeriod-{{ name }}">
+              {{ module.period_slider.period_label }}
+            </label>
+            <input 
+              class="calc-range-input" 
+              id="investmentPeriod-{{ name }}" 
+              type="range" 
+              min="{{ module.period_slider.period_min }}" 
+              max="{{ module.period_slider.period_max }}" 
+              value="{{ module.period_slider.period_default }}"
+              data-type="period"
+            >
+            <div class="calc-value" id="periodDisplay-{{ name }}">
+              {{ module.period_slider.period_default }} mo
+            </div>
+          </div>
+          
+          <div class="calc-results">
+            <div class="calc-result">
+              <span>{{ module.expected_return_label }}</span>
+              <strong id="returnDisplay-{{ name }}">&euro; 0</strong>
+            </div>
+            <div class="calc-result">
+              <span>Total Value</span>
+              <strong id="totalDisplay-{{ name }}">&euro; 0</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="calculator-content">
+          <h2>{{ module.heading }}</h2>
+          {% if module.lead_text %}
+            <p class="lead">{{ module.lead_text }}</p>
+          {% endif %}
+          {% if module.body_text %}
+            <div>{{ module.body_text }}</div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    const moduleId = '{{ name }}';
+    const yieldRate = {{ module.average_yield }} / 100;
+    
+    const amountSlider = document.getElementById('investmentAmount-' + moduleId);
+    const periodSlider = document.getElementById('investmentPeriod-' + moduleId);
+    const amountDisplay = document.getElementById('amountDisplay-' + moduleId);
+    const periodDisplay = document.getElementById('periodDisplay-' + moduleId);
+    const returnDisplay = document.getElementById('returnDisplay-' + moduleId);
+    const totalDisplay = document.getElementById('totalDisplay-' + moduleId);
+    
+    function formatCurrency(value) {
+      return '€ ' + value.toLocaleString('nl-NL');
+    }
+    
+    function calculate() {
+      const amount = parseInt(amountSlider.value);
+      const months = parseInt(periodSlider.value);
+      const years = months / 12;
+      
+      const totalValue = amount * Math.pow(1 + yieldRate, years);
+      const returnValue = totalValue - amount;
+      
+      amountDisplay.textContent = formatCurrency(amount);
+      periodDisplay.textContent = months + ' mo';
+      returnDisplay.textContent = formatCurrency(Math.round(returnValue));
+      totalDisplay.textContent = formatCurrency(Math.round(totalValue));
+    }
+    
+    if (amountSlider && periodSlider) {
+      amountSlider.addEventListener('input', calculate);
+      periodSlider.addEventListener('input', calculate);
+      calculate();
+    }
+  })();
+</script>

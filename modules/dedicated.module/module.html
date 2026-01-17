@@ -1,0 +1,35 @@
+{# 
+  MODULE: Dedicated Section
+  source: dedicated-section
+#}
+
+{% if module.background_image.src %}
+  {% set bg_url = module.background_image.src %}
+  {% if bg_url is string_startingwith "/" %}
+    {% set bg_url = get_asset_url(bg_url) %}
+  {% endif %}
+  {% set inline_style = 'style="--bg-image: url(' ~ bg_url ~ ');"' %}
+{% else %}
+  {% set inline_style = '' %}
+{% endif %}
+
+<section class="dedicated-section" {{ inline_style }}>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="dedicated-content">
+          <h2>{{ module.heading }}</h2>
+          <div class="dedicated-description mb-4">
+            {{ module.description }}
+          </div>
+          {% if module.cta_button.text %}
+            <a class="btn btn-dedicated rounded-pill d-inline-flex align-items-center gap-2" href="{{ module.cta_button.url.url.href }}">
+              {{ module.cta_button.text }} <i class="bi bi-arrow-right"></i>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6"></div>
+    </div>
+  </div>
+</section>

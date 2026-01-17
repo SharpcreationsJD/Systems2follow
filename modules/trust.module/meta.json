@@ -1,0 +1,33 @@
+{
+    "label":  "Professionals Sectie",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "user",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Professionals - Trust Sectie",
+                          "description":  "Sectie die de betrouwbaarheid van de professionals benadrukt. Lichte achtergrond met afbeelding links en content rechts.",
+                          "features":  [
+                                           "Rode/accent titel",
+                                           "Beschrijvende tekst",
+                                           "Key highlights label",
+                                           "Bullet list met highlights (1-8 items)",
+                                           "Achtergrondafbeelding met overlay"
+                                       ]
+                      }
+}

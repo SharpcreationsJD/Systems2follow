@@ -1,0 +1,120 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "Fair fixed tariffs without hidden costs."
+    },
+    {
+        "id": "description",
+        "name": "description",
+        "label": "Beschrijving",
+        "type": "text",
+        "default": "The higher your deposit, the higher your discount. Make your choice between the factor and the term of your subscription."
+    },
+    {
+        "id": "duration_options",
+        "name": "duration_options",
+        "label": "Duur Opties",
+        "type": "group",
+        "occurrence": {
+            "min": 2,
+            "max": 5
+        },
+        "children": [
+            {
+                "id": "option_label",
+                "name": "option_label",
+                "label": "Label",
+                "type": "text",
+                "default": "1 month"
+            }
+        ],
+        "default": [
+            {
+                "option_label": "1 month"
+            },
+            {
+                "option_label": "1 year"
+            },
+            {
+                "option_label": "2 years"
+            }
+        ]
+    },
+    {
+        "id": "factor_options",
+        "name": "factor_options",
+        "label": "Factor Opties",
+        "type": "group",
+        "occurrence": {
+            "min": 2,
+            "max": 10
+        },
+        "children": [
+            {
+                "id": "factor_name",
+                "name": "factor_name",
+                "label": "Naam",
+                "type": "text",
+                "default": "Factor 1"
+            },
+            {
+                "id": "capital",
+                "name": "capital",
+                "label": "Kapitaal",
+                "type": "text",
+                "default": "EUR 12,000"
+            },
+            {
+                "id": "cost",
+                "name": "cost",
+                "label": "Kosten per Maand",
+                "type": "text",
+                "default": "EUR 44/mo"
+            }
+        ],
+        "default": [
+            {
+                "factor_name": "Factor 1",
+                "capital": "EUR 12,000",
+                "cost": "EUR 44/mo"
+            },
+            {
+                "factor_name": "Factor 2",
+                "capital": "EUR 18,000",
+                "cost": "EUR 62/mo"
+            },
+            {
+                "factor_name": "Factor 3",
+                "capital": "EUR 24,000",
+                "cost": "EUR 88/mo"
+            },
+            {
+                "factor_name": "Factor 4",
+                "capital": "EUR 36,000",
+                "cost": "EUR 120/mo"
+            },
+            {
+                "factor_name": "Factor 5",
+                "capital": "EUR 48,000",
+                "cost": "EUR 160/mo"
+            }
+        ]
+    },
+    {
+        "id": "consent_text",
+        "name": "consent_text",
+        "label": "Toestemming Tekst",
+        "type": "text",
+        "default": "I agree to the Terms and Conditions and Privacy Policy of Systems2follow."
+    },
+    {
+        "id": "submit_text",
+        "name": "submit_text",
+        "label": "Submit Knop Tekst",
+        "type": "text",
+        "default": "Confirm and pay"
+    }
+]

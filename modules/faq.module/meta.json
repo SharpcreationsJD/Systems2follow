@@ -1,0 +1,27 @@
+{
+    "label": "Veelgestelde Vragen",
+    "css_assets": [],
+    "external_js": [],
+    "js_assets": [],
+    "global": false,
+    "host_template_types": [
+        "PAGE"
+    ],
+    "icon": "question",
+    "smart_type": "NOT_SMART",
+    "is_available_for_new_content": true,
+    "categories": [
+        "BODY_CONTENT"
+    ],
+    "documentation": {
+        "title": "FAQ Accordion Module",
+        "description": "Veelgestelde vragen sectie met categorieën en accordion functionaliteit. Tabbladen voor categorieën, uitklapbare vragen met antwoorden.",
+        "features": [
+            "Titel en ondertitel",
+            "1-5 categorieën",
+            "1-10 vragen per categorie",
+            "Accordion open/dicht functie",
+            "Tab switching tussen categorieën"
+        ]
+    }
+}

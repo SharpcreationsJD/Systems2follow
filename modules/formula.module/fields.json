@@ -1,0 +1,86 @@
+[
+    {
+        "id": "eyebrow",
+        "name": "eyebrow",
+        "label": "Eyebrow Tekst",
+        "type": "text",
+        "default": "Our formula"
+    },
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "richtext",
+        "default": "Our strength is built on four pillars &ndash;<br>the foundation of everything we do:"
+    },
+    {
+        "id": "cards",
+        "name": "cards",
+        "label": "Cards",
+        "type": "group",
+        "occurrence": {
+            "min": 2,
+            "max": 6
+        },
+        "children": [
+            {
+                "id": "image",
+                "name": "image",
+                "label": "Afbeelding",
+                "type": "image",
+                "default": {
+                    "src": "",
+                    "alt": "Card image"
+                }
+            },
+            {
+                "id": "title",
+                "name": "title",
+                "label": "Titel",
+                "type": "text",
+                "default": "Card Title"
+            },
+            {
+                "id": "description",
+                "name": "description",
+                "label": "Beschrijving",
+                "type": "text",
+                "default": "Card description text"
+            }
+        ],
+        "default": [
+            {
+                "title": "Customer Focus",
+                "description": "Our customers are at the heart of our success. We offer user-friendly services, clear support, and solutions designed for every stage of life.",
+                "image": {
+                    "src": "",
+                    "alt": "Customer Focus"
+                }
+            },
+            {
+                "title": "Expertise",
+                "description": "With more than 40 years of stock-market experience, expertise is our core. It guides the selection of our systems and the support we offer every investor.",
+                "image": {
+                    "src": "",
+                    "alt": "Expertise"
+                }
+            },
+            {
+                "title": "Reliability",
+                "description": "Investing involves risk, but trust is non-negotiable. We deliver what we promise, remain transparent, and build long-term relationships based on integrity.",
+                "image": {
+                    "src": "",
+                    "alt": "Reliability"
+                }
+            },
+            {
+                "title": "Accessibility",
+                "description": "We're here for you by phone, chat, or email. Personal support matters, and we ensure you're never left on your own.",
+                "image": {
+                    "src": "",
+                    "alt": "Accessibility"
+                }
+            }
+        ]
+    }
+]

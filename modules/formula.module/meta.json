@@ -1,0 +1,32 @@
+{
+    "label":  "Formule Cards",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "grid",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Formule / Feature Cards",
+                          "description":  "Grid van cards met afbeelding, titel en beschrijving. Ideaal voor kernwaarden, pijlers of features.",
+                          "features":  [
+                                           "Eyebrow tekst optioneel",
+                                           "Hoofdtitel",
+                                           "2-6 cards",
+                                           "Afbeelding + titel + beschrijving per card"
+                                       ]
+                      }
+}

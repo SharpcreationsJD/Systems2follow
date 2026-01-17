@@ -1,0 +1,26 @@
+{
+    "label": "Systeem Detail Pagina",
+    "css_assets": [],
+    "external_js": [],
+    "js_assets": [],
+    "global": false,
+    "host_template_types": [
+        "PAGE"
+    ],
+    "icon": "chart-line",
+    "smart_type": "NOT_SMART",
+    "is_available_for_new_content": true,
+    "categories": [
+        "BODY_CONTENT"
+    ],
+    "documentation": {
+        "title": "System Single / Detail View",
+        "description": "Complete detail weergave van één trading systeem. Sidebar met overzicht en main content met beschrijving.",
+        "features": [
+            "Sidebar met trader, kapitaal, risico",
+            "Rendement statistieken",
+            "Beschrijving tekst",
+            "Invest now CTA"
+        ]
+    }
+}

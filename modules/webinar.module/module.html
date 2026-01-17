@@ -1,0 +1,45 @@
+{# 
+  ============================================================
+  MODULE: Webinar Grid
+  ============================================================
+  BESCHRIJVING:
+  Grid van aankomende webinars.
+  
+  OPTIES:
+  - heading: Titel
+  - description: Intro tekst
+  - webinars: Array van 1-8 events
+  
+  STYLING:
+  - Donkere achtergrond (#03251a)
+  - 4-koloms grid
+  - Witte cards
+  ============================================================
+#}
+
+<section class="webinar-module">
+  <div class="container">
+    <div class="webinar-header">
+      <h2>{{ module.heading }}</h2>
+      {% if module.description %}
+        <p>{{ module.description }}</p>
+      {% endif %}
+    </div>
+    <div class="webinar-grid">
+      {% for webinar in module.webinars %}
+        <article class="webinar-card">
+          {% if webinar.image.src %}
+            <img src="{{ webinar.image.src }}" alt="{{ webinar.image.alt }}">
+          {% else %}
+             <img src="{{ get_asset_url('/Systems2followTheme/images/section-intro.png') }}" alt="Webinar Default">
+          {% endif %}
+          <h3>{{ webinar.title }}</h3>
+          <span class="webinar-date">{{ webinar.date }}</span>
+          <a class="webinar-link" href="{{ webinar.link.url.href }}">
+            {{ webinar.link_text }} <i class="bi bi-arrow-right"></i>
+          </a>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

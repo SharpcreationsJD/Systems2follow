@@ -1,0 +1,106 @@
+{# 
+  ============================================================
+  MODULE: Veelgestelde Vragen (FAQ)
+  ============================================================
+  BESCHRIJVING:
+  - categories: Array van FAQ categorie&euml;n met vragen
+  
+  STYLING:
+  - Lichte achtergrond (#f2f4f4)
+  - Witte vraag containers
+  - Plus/X iconen voor open/dicht
+  ============================================================
+#}
+
+<section class="faq-module" id="faq-{{ name }}">
+  <div class="container">
+    <div class="faq-header">
+      <h2>{{ module.heading }}</h2>
+      {% if module.subtitle %}
+        <p>{{ module.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    {% if module.categories|length > 1 %}
+      <div class="faq-tabs">
+        {% for cat in module.categories %}
+          <button class="faq-tab {% if loop.first %}is-active{% endif %}" type="button" data-faq="faq-{{ loop.index }}">
+            {{ cat.name }}
+          </button>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <div class="faq-panels">
+      {% for cat in module.categories %}
+        <div class="faq-panel {% if loop.first %}is-active{% endif %}" data-panel="faq-{{ loop.index }}">
+          {% for item in cat.questions %}
+            <div class="faq-item {% if loop.first %}is-open{% endif %}">
+              <button class="faq-question" type="button">
+                <span>{{ item.question }}</span>
+                <i class="bi {% if loop.first %}bi-x-lg{% else %}bi-plus-lg{% endif %}"></i>
+              </button>
+              <div class="faq-answer">
+                {{ item.answer }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  const module = document.getElementById('faq-{{ name }}');
+  if (!module) return;
+  
+  // Tab switching
+  const tabs = module.querySelectorAll('.faq-tab');
+  const panels = module.querySelectorAll('.faq-panel');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-faq');
+      
+      tabs.forEach(t => t.classList.remove('is-active'));
+      panels.forEach(p => p.classList.remove('is-active'));
+      
+      tab.classList.add('is-active');
+      const activePanel = module.querySelector(`.faq-panel[data-panel="${target}"]`);
+      if (activePanel) activePanel.classList.add('is-active');
+    });
+  });
+  
+  // Accordion
+  const items = module.querySelectorAll('.faq-item');
+  items.forEach(item => {
+    const button = item.querySelector('.faq-question');
+    const icon = item.querySelector('.faq-question i');
+    
+    if (!button || !icon) return;
+    
+    button.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      
+      // Close all in same panel
+      const panel = item.closest('.faq-panel');
+      panel.querySelectorAll('.faq-item').forEach(faq => {
+        faq.classList.remove('is-open');
+        const faqIcon = faq.querySelector('.faq-question i');
+        if (faqIcon) {
+          faqIcon.classList.remove('bi-x-lg');
+          faqIcon.classList.add('bi-plus-lg');
+        }
+      });
+      
+      if (!isOpen) {
+        item.classList.add('is-open');
+        icon.classList.remove('bi-plus-lg');
+        icon.classList.add('bi-x-lg');
+      }
+    });
+  });
+})();
+</script>

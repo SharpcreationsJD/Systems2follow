@@ -1,0 +1,31 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: false
+  label: Systems2follow - 500 Error
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+  {% module "header" path="/Systems2followTheme/modules/header.module" %}
+  
+  {% module "hero_500" 
+     path="/Systems2followTheme/modules/hero.module",
+     heading={
+       "line1": "500",
+       "line2": "Server Error"
+     },
+     subtitle="Er is iets misgegaan aan onze kant.",
+     cta_button={
+       "text": "Probeer opnieuw",
+       "url": { "href": "/" },
+       "show_arrow": true
+     },
+     height="medium"
+  %}
+
+  <div class="container py-5 text-center">
+      <p>Onze excuses. Probeer de pagina te verversen of kom later terug.</p>
+  </div>
+  
+  {% module "footer" path="/Systems2followTheme/modules/footer.module" %}
+{% endblock body %}

@@ -1,0 +1,121 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "What our clients say"
+    },
+    {
+        "id": "subtitle",
+        "name": "subtitle",
+        "label": "Ondertitel",
+        "type": "text",
+        "default": "Discover how our clients have transformed their investment journey with Systems2follow."
+    },
+    {
+        "id": "testimonials",
+        "name": "testimonials",
+        "label": "Reviews",
+        "type": "group",
+        "help_text": "Voeg klantreviews toe",
+        "occurrence": {
+            "min": 3,
+            "max": 12
+        },
+        "children": [
+            {
+                "id": "rating",
+                "name": "rating",
+                "label": "Sterren (1-5)",
+                "type": "number",
+                "min": 1,
+                "max": 5,
+                "default": 5
+            },
+            {
+                "id": "quote",
+                "name": "quote",
+                "label": "Review Tekst",
+                "type": "richtext",
+                "default": "Quote tekst"
+            },
+            {
+                "id": "author_name",
+                "name": "author_name",
+                "label": "Naam",
+                "type": "text",
+                "default": "John Doe"
+            },
+            {
+                "id": "author_role",
+                "name": "author_role",
+                "label": "Functie/Rol",
+                "type": "text",
+                "default": "Investor"
+            }
+        ],
+        "default": [
+            {
+                "rating": 5,
+                "quote": "\"Systems2follow has completely changed my approach to investing. The automation is seamless and the returns speak for themselves.\"",
+                "author_name": "John Carter",
+                "author_role": "Private Investor"
+            },
+            {
+                "rating": 5,
+                "quote": "\"Finally, a platform that lets me benefit from professional trading without spending hours analyzing markets. Highly recommended!\"",
+                "author_name": "Sophie Moore",
+                "author_role": "Business Owner"
+            },
+            {
+                "rating": 5,
+                "quote": "\"The transparency and control you maintain over your own funds is what sets Systems2follow apart. I feel secure knowing my money stays in my account.\"",
+                "author_name": "Matt Cannon",
+                "author_role": "Tech Professional"
+            },
+            {
+                "rating": 5,
+                "quote": "\"I was skeptical at first, but after 6 months of consistent returns, I'm now recommending Systems2follow to everyone I know.\"",
+                "author_name": "Andy Smith",
+                "author_role": "Entrepreneur"
+            }
+        ]
+    },
+    {
+        "id": "slider_settings",
+        "name": "slider_settings",
+        "label": "Slider Instellingen",
+        "type": "group",
+        "children": [
+            {
+                "id": "autoplay",
+                "name": "autoplay",
+                "label": "Automatisch afspelen",
+                "type": "boolean",
+                "default": false
+            },
+            {
+                "id": "items_desktop",
+                "name": "items_desktop",
+                "label": "Items Desktop",
+                "type": "number",
+                "default": 3
+            },
+            {
+                "id": "items_tablet",
+                "name": "items_tablet",
+                "label": "Items Tablet",
+                "type": "number",
+                "default": 2
+            },
+            {
+                "id": "items_mobile",
+                "name": "items_mobile",
+                "label": "Items Mobiel",
+                "type": "number",
+                "default": 1
+            }
+        ]
+    }
+]

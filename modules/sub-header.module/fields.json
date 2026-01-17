@@ -1,0 +1,26 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Pagina Titel",
+        "type": "text",
+        "default": "Traders"
+    },
+    {
+        "id": "description",
+        "name": "description",
+        "label": "Beschrijving",
+        "type": "richtext",
+        "default": "Sub-header description text."
+    },
+    {
+        "id": "background_image",
+        "name": "background_image",
+        "label": "Achtergrond Afbeelding",
+        "type": "image",
+        "default": {
+            "src": "/Systems2followTheme/images/hero-bg.jpg",
+            "alt": "Hero background"
+        }
+    }
+]

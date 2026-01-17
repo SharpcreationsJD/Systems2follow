@@ -1,0 +1,34 @@
+{
+    "label":  "Investering Calculator",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "calculator",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Investering Calculator",
+                          "description":  "Interactieve calculator waarmee bezoekers hun verwachte rendement kunnen berekenen op basis van investeringsbedrag en periode.",
+                          "features":  [
+                                           "Slider voor investeringsbedrag",
+                                           "Slider voor investeringsperiode",
+                                           "Real-time berekening van verwacht rendement",
+                                           "Aanpasbare min/max waarden",
+                                           "Configureerbaar gemiddeld rendement percentage"
+                                       ],
+                          "usage":  "Plaats na de systemen sectie om bezoekers te helpen visualiseren wat hun investering kan opleveren."
+                      }
+}

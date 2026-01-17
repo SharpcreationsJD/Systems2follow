@@ -1,0 +1,24 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: false
+  label: Systems2follow - Backup Unsubscribe
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+  {% module "header" path="/Systems2followTheme/modules/header.module" %}
+  
+  <div class="container py-5 mt-5">
+      <div class="row justify-content-center">
+          <div class="col-lg-6">
+             <div class="system-content-card text-center">
+                <h1 class="mb-4">Uitschrijven</h1>
+                <p class="mb-4 text-muted">Weet je zeker dat je geen updates meer wilt ontvangen?</p>
+                {% module "backup_unsubscribe" path="@hubspot/email_backup_unsubscribe" %}
+             </div>
+          </div>
+      </div>
+  </div>
+  
+  {% module "footer" path="/Systems2followTheme/modules/footer.module" %}
+{% endblock body %}

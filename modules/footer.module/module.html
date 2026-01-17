@@ -1,0 +1,69 @@
+{# 
+  MODULE: Website Footer
+  source: index.html
+#}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      {# Brand Column #}
+      <div class="footer-brand">
+        <div class="footer-logo">
+          {% if module.logo.src %}
+            {% set logo_src = module.logo.src %}
+            {% if logo_src is string_startingwith "/" %}
+              {% set logo_src = get_asset_url(logo_src) %}
+            {% endif %}
+            <img src="{{ logo_src }}" alt="{{ module.logo.alt }}">
+          {% else %}
+            <img src="{{ get_asset_url('/Systems2followTheme/images/logo-dark.svg') }}" alt="Systems2follow">
+          {% endif %}
+        </div>
+        {% if module.description %}
+          <p>{{ module.description }}</p>
+        {% endif %}
+        
+        {% if module.newsletter.newsletter_show %}
+          <div class="footer-subscribe">
+            <input type="email" placeholder="{{ module.newsletter.placeholder }}">
+            <button class="btn footer-btn" type="button">{{ module.newsletter.button_text }}</button>
+          </div>
+        {% endif %}
+      </div>
+
+      {# Menu Columns #}
+      {% for column in module.menu_columns %}
+        <div class="footer-links">
+          <h4>{{ column.column_title }}</h4>
+          <ul>
+            {% for link in column.links %}
+              <li><a href="{{ link.url.url.href }}">{{ link.text }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+
+      {# Instagram Grid Column #}
+      <div class="footer-instagram">
+        <h4>{{ module.social_links.social_title }}</h4>
+        <div class="footer-ig-grid">
+          {% for tile in module.social_links.instagram_grid %}
+            {% if tile.image.src %}
+               {% set bg_img = tile.image.src %}
+               {% if bg_img is string_startingwith "/" %}
+                  {% set bg_img = get_asset_url(bg_img) %}
+               {% endif %}
+               <div class="ig-tile" style="background-image: url('{{ bg_img }}'); background-size: cover; background-position: center;"></div>
+            {% else %}
+               <div class="ig-tile"></div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      {{ module.copyright }}
+    </div>
+  </div>
+</footer>

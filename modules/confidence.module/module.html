@@ -1,0 +1,35 @@
+{# 
+  MODULE: Confidence Section
+  source: confidence-section
+#}
+
+{% if module.background_image.src %}
+  {% set bg_url = module.background_image.src %}
+  {% if bg_url is string_startingwith "/" %}
+    {% set bg_url = get_asset_url(bg_url) %}
+  {% endif %}
+  {% set inline_style = 'style="--bg-image: url(' ~ bg_url ~ ');"' %}
+{% else %}
+  {% set inline_style = '' %}
+{% endif %}
+
+<section class="confidence-section" {{ inline_style }}>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="confidence-content">
+          <h2>{{ module.heading }}</h2>
+          <div class="confidence-description">
+            {{ module.description }}
+          </div>
+          {% if module.highlight_text %}
+            <p class="confidence-highlight">
+              {{ module.highlight_text }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="col-lg-6"></div>
+    </div>
+  </div>
+</section>

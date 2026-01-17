@@ -1,0 +1,40 @@
+{
+    "label":  "Hero Banner",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "text_left_image_right",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "content_tags":  [
+                         {
+                             "name":  "HERO",
+                             "source":  "HUBSPOT"
+                         }
+                     ],
+    "documentation":  {
+                          "title":  "Hero Banner",
+                          "description":  "Grote hero sectie voor bovenaan de pagina met een opvallende titel, ondertitel en call-to-action knop. Bevat een achtergrondafbeelding met gradient overlay.",
+                          "features":  [
+                                           "Tweeregelige titel met accent kleur voor de tweede regel",
+                                           "Ondertitel voor extra context",
+                                           "Call-to-action knop met optioneel pijl icoon",
+                                           "Aanpasbare achtergrondafbeelding",
+                                           "Keuze uit 3 hoogtes (volledig scherm, groot, medium)"
+                                       ],
+                          "usage":  "Plaats deze module als eerste in de pagina content voor maximale impact."
+                      }
+}

@@ -1,0 +1,34 @@
+{
+    "label":  "Nieuws \u0026 Insights",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "newspaper",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Nieuws \u0026 Insights Sectie",
+                          "description":  "Tabbladen interface voor het tonen van nieuws, updates en insights. Elk tabblad kan meerdere artikelen bevatten. Donkere achtergrond met cards voor artikelen.",
+                          "features":  [
+                                           "Titel en ondertitel",
+                                           "2-6 tabbladen",
+                                           "1-8 artikelen per tab",
+                                           "Afbeelding + badge per artikel",
+                                           "Interactieve tab switching",
+                                           "CTA knop onderaan"
+                                       ]
+                      }
+}

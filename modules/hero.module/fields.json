@@ -1,0 +1,101 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Hoofdtitel",
+        "type": "group",
+        "help_text": "De grote titel in de hero sectie",
+        "children": [
+            {
+                "id": "line1",
+                "name": "line1",
+                "label": "Regel 1",
+                "type": "text",
+                "default": "Trade like a pro,"
+            },
+            {
+                "id": "line2",
+                "name": "line2",
+                "label": "Regel 2 (Accent)",
+                "type": "text",
+                "help_text": "Deze tekst wordt in de accent kleur weergegeven",
+                "default": "automatically."
+            }
+        ]
+    },
+    {
+        "id": "subtitle",
+        "name": "subtitle",
+        "label": "Ondertitel",
+        "type": "text",
+        "help_text": "Korte beschrijving onder de hoofdtitel",
+        "default": "Follow expert traders and let your portfolio do the work."
+    },
+    {
+        "id": "cta_button",
+        "name": "cta_button",
+        "label": "Call-to-Action Knop",
+        "type": "group",
+        "children": [
+            {
+                "id": "text",
+                "name": "text",
+                "label": "Knop Tekst",
+                "type": "text",
+                "default": "Discover our systems"
+            },
+            {
+                "id": "url",
+                "name": "url",
+                "label": "Knop URL",
+                "type": "link",
+                "default": {
+                    "url": {
+                        "href": "#systems"
+                    }
+                }
+            },
+            {
+                "id": "show_arrow",
+                "name": "show_arrow",
+                "label": "Toon Pijl Icoon",
+                "type": "boolean",
+                "default": true
+            }
+        ]
+    },
+    {
+        "id": "background_image",
+        "name": "background_image",
+        "label": "Achtergrond Afbeelding",
+        "type": "image",
+        "help_text": "Achtergrond foto voor de hero sectie (aanbevolen: 1920x1080px)",
+        "default": {
+            "src": "/Systems2followTheme/images/hero-bg.jpg",
+            "alt": "Hero background"
+        }
+    },
+    {
+        "id": "height",
+        "name": "height",
+        "label": "Hoogte",
+        "type": "choice",
+        "help_text": "Hoogte van de hero sectie",
+        "choices": [
+            [
+                "full",
+                "Volledig scherm"
+            ],
+            [
+                "large",
+                "Groot (900px)"
+            ],
+            [
+                "medium",
+                "Medium (700px)"
+            ]
+        ],
+        "default": "large"
+    }
+]
+

@@ -1,0 +1,41 @@
+{# 
+  ============================================================
+  MODULE: Formule / Feature Cards
+  ============================================================
+  BESCHRIJVING:
+  Grid van cards met afbeelding, titel en beschrijving.
+  
+  OPTIES:
+  - eyebrow: Kleine tekst boven titel
+  - heading: Hoofdtitel
+  - cards: Array van 2-6 cards
+  
+  STYLING:
+  - Lichte achtergrond (#f2f4f4)
+  - 4-koloms grid op desktop
+  ============================================================
+#}
+
+<section class="formula-module">
+  <div class="container">
+    <div class="formula-header">
+      {% if module.eyebrow %}
+        <span class="formula-eyebrow">{{ module.eyebrow }}</span>
+      {% endif %}
+      <h2>{{ module.heading }}</h2>
+    </div>
+    <div class="formula-grid">
+      {% for card in module.cards %}
+        <article class="formula-card">
+          {% if card.image.src %}
+            <img src="{{ card.image.src }}" alt="{{ card.image.alt }}">
+          {% else %}
+             <img src="{{ get_asset_url('/Systems2followTheme/images/section-intro.png') }}" alt="{{ card.title }}">
+          {% endif %}
+          <h3>{{ card.title }}</h3>
+          <p>{{ card.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

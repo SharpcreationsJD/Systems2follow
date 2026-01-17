@@ -1,0 +1,187 @@
+<!--
+  templateType: page
+  label: Systems2follow - Homepagina
+  isAvailableForNewContent: true
+  screenshotPath: ../images/template-preview.png
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+{# 
+  ============================================================
+  SYSTEMS2FOLLOW HOMEPAGE TEMPLATE
+  ============================================================
+  Dit is de hoofdtemplate voor de Systems2follow website.
+  Alle modules worden geladen via drag & drop sections.
+  
+  BESCHIKBARE MODULES:
+  1. Header - Navigatiebalk
+  2. Hero - Hoofdbanner met titel en CTA
+  3. Intro - Introductiesectie
+  4. How It Works - 4-stappen uitleg
+  5. Confidence - Vertrouwenssectie
+  6. Trust - Professionals sectie
+  7. Systems - Trading systemen overzicht
+  8. Calculator - Investering calculator
+  9. Testimonials - Klantenreviews
+  10. News - Nieuws en insights
+  11. FAQ - Veelgestelde vragen
+  12. Dedicated - CTA sectie
+  13. Footer - Footer met links
+  ============================================================
+#}
+
+{# Header Module - Altijd bovenaan #}
+{% module "header" 
+   path="/Systems2followTheme/modules/header.module" 
+   label="Header - Navigatiebalk"
+%}
+
+{# Drag & Drop Area - Hoofdcontent #}
+{% dnd_area "main_content"
+   label="Pagina Inhoud - Sleep modules hierheen"
+%}
+  
+  {# Standaard modules voor nieuwe pagina's #}
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/hero.module"
+           label="Hero Banner"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/intro.module"
+           label="Intro Sectie"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/how-it-works.module"
+           label="Hoe Het Werkt"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/confidence.module"
+           label="Vertrouwen Sectie"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/trust.module"
+           label="Professionals Sectie"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/systems.module"
+           label="Trading Systemen"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/calculator.module"
+           label="Investering Calculator"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/testimonials.module"
+           label="Klantbeoordelingen"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/news.module"
+           label="Nieuws & Insights"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/faq.module"
+           label="Veelgestelde Vragen"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+  {% dnd_section %}
+    {% dnd_column %}
+      {% dnd_row %}
+        {% dnd_module
+           path="/Systems2followTheme/modules/dedicated.module"
+           label="Download CTA"
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}
+
+{% end_dnd_area %}
+
+{# Footer Module - Altijd onderaan #}
+{% module "footer" 
+   path="/Systems2followTheme/modules/footer.module" 
+   label="Footer"
+%}
+{% endblock body %}
+
+

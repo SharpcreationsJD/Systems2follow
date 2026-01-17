@@ -1,0 +1,60 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "Our Story"
+    },
+    {
+        "id": "paragraphs",
+        "name": "paragraphs",
+        "label": "Tekst",
+        "type": "richtext",
+        "default": "<p>Systems2follow is the most transparent and honest platform for accessing professional trading systems.</p><p>Our history spans decades of market experience, with a clear goal: make investing easier, smarter, and available to everyone.</p>"
+    },
+    {
+        "id": "image",
+        "name": "image",
+        "label": "Afbeelding",
+        "type": "image",
+        "default": {
+            "src": "/Systems2followTheme/images/our-story.png",
+            "alt": "Story image"
+        }
+    },
+    {
+        "id": "image_position",
+        "name": "image_position",
+        "label": "Afbeelding Positie",
+        "type": "choice",
+        "choices": [
+            [
+                "left",
+                "Links"
+            ],
+            [
+                "right",
+                "Rechts"
+            ]
+        ],
+        "default": "left"
+    },
+    {
+        "id": "background_color",
+        "name": "background_color",
+        "label": "Achtergrondkleur",
+        "type": "choice",
+        "choices": [
+            [
+                "white",
+                "Wit"
+            ],
+            [
+                "gray",
+                "Grijs"
+            ]
+        ],
+        "default": "white"
+    }
+]

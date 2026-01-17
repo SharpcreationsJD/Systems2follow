@@ -1,0 +1,32 @@
+{
+    "label":  "Download CTA",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "download",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Download CTA Sectie",
+                          "description":  "Grote call-to-action sectie met titel, beschrijving en download knop. Inclusief achtergrondafbeelding rechts. Ideaal voor lead generation met een gratis gids/PDF.",
+                          "features":  [
+                                           "Groene titel",
+                                           "Beschrijvende tekst",
+                                           "Download/CTA knop met eigen styling",
+                                           "Grote achtergrondafbeelding rechts"
+                                       ]
+                      }
+}

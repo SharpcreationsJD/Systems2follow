@@ -1,0 +1,51 @@
+<!--
+  Template: System Single Page
+  Beschrijving: Detail pagina voor één trading systeem
+-->
+{% extends "/Systems2followTheme/templates/layouts/base.html" %}
+
+{% block body %}
+  {# Header #}
+  {% module "header" path="/Systems2followTheme/modules/header.module" %}
+
+  {# Pagina Header (compact) #}
+  {% module "sub_header" 
+     path="/Systems2followTheme/modules/sub-header.module"
+     title=""
+  %}
+
+  {# Systeem Detail #}
+  {% dnd_area "main_content" label="Pagina Inhoud" %}
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="/Systems2followTheme/modules/system-single.module" %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+    
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="/Systems2followTheme/modules/pricing.module" %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+    
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="/Systems2followTheme/modules/dedicated.module" %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+
+  {# Footer #}
+  {% module "footer" path="/Systems2followTheme/modules/footer.module" %}
+{% endblock body %}
+
+

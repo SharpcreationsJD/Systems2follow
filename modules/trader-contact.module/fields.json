@@ -1,0 +1,24 @@
+[
+    {
+        "name": "heading",
+        "label": "Heading",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Become a trader"
+    },
+    {
+        "name": "description",
+        "label": "Description",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit tortor eu dolorol egestas morbi sem vulputate etiam facilisis pellentesque ut quis."
+    },
+    {
+        "name": "form_title",
+        "label": "Form Context",
+        "type": "text",
+        "default": "Or contact us below"
+    }
+]

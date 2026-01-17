@@ -1,0 +1,44 @@
+{# 
+  MODULE: Hero Banner
+  source: index.html
+#}
+
+{% set height_class = "hero--" ~ module.height %}
+
+{% if module.background_image.src %}
+  {% set bg_url = module.background_image.src %}
+  {% if bg_url is string_startingwith "/" %}
+    {% set bg_url = get_asset_url(bg_url) %}
+  {% endif %}
+  {% set inline_style = 'style="--bg-image: url(' ~ bg_url ~ ');"' %}
+{% else %}
+  {% set inline_style = '' %}
+{% endif %}
+
+<section class="hero {{ height_class }}" {{ inline_style }}>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <h1 class="hero-title">
+          {{ module.heading.line1 }}<br>
+          <span>{{ module.heading.line2 }}</span>
+        </h1>
+        
+        {% if module.subtitle %}
+          <p class="hero-subtitle">{{ module.subtitle }}</p>
+        {% endif %}
+        
+        {% if module.cta_button.text %}
+          <div class="hero-actions d-flex flex-wrap gap-3">
+            <a class="btn btn-accent btn-lg rounded-pill" href="{{ module.cta_button.url.url.href }}">
+              {{ module.cta_button.text }}
+              {% if module.cta_button.show_arrow %}
+                <i class="bi bi-arrow-right"></i>
+              {% endif %}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

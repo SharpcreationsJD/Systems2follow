@@ -1,0 +1,113 @@
+[
+    {
+        "id": "eyebrow",
+        "name": "eyebrow",
+        "label": "Eyebrow Tekst",
+        "type": "text",
+        "help_text": "Kleine tekst boven de titel (bijv. 'How it works')",
+        "default": "How it works"
+    },
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "richtext",
+        "help_text": "Hoofdtitel. Gebruik <span> voor accent kleur.",
+        "default": "Your path to professional returns in <span>4 easy steps</span>"
+    },
+    {
+        "id": "subtitle",
+        "name": "subtitle",
+        "label": "Ondertitel",
+        "type": "richtext",
+        "help_text": "Uitleg tekst onder de titel",
+        "default": "Systems2follow makes professional investing accessible and effortless. With just four simple steps, you can start benefiting from the expertise of top traders, without managing trades yourself."
+    },
+    {
+        "id": "steps",
+        "name": "steps",
+        "label": "Stappen",
+        "type": "group",
+        "help_text": "De 4 stappen met afbeelding en beschrijving",
+        "occurrence": {
+            "min": 2,
+            "max": 6
+        },
+        "children": [
+            {
+                "id": "image",
+                "name": "image",
+                "label": "Stap Afbeelding",
+                "type": "image",
+                "default": {
+                    "src": "",
+                    "alt": "Step image"
+                }
+            },
+            {
+                "id": "title",
+                "name": "title",
+                "label": "Stap Titel",
+                "type": "richtext",
+                "help_text": "Gebruik <br> voor regelafbreking",
+                "default": "Step title"
+            }
+        ],
+        "default": [
+            {
+                "title": "Choose your trading<br>system",
+                "image": {
+                    "src": "",
+                    "alt": "Choose system"
+                }
+            },
+            {
+                "title": "Open a brokerage<br>account",
+                "image": {
+                    "src": "",
+                    "alt": "Open account"
+                }
+            },
+            {
+                "title": "Link your trading<br>account",
+                "image": {
+                    "src": "",
+                    "alt": "Link account"
+                }
+            },
+            {
+                "title": "Lean back and invest<br>automatically",
+                "image": {
+                    "src": "",
+                    "alt": "Invest automatically"
+                }
+            }
+        ]
+    },
+    {
+        "id": "cta_button",
+        "name": "cta_button",
+        "label": "CTA Knop",
+        "type": "group",
+        "children": [
+            {
+                "id": "text",
+                "name": "text",
+                "label": "Knop Tekst",
+                "type": "text",
+                "default": "Read more about us"
+            },
+            {
+                "id": "url",
+                "name": "url",
+                "label": "Knop URL",
+                "type": "link",
+                "default": {
+                    "url": {
+                        "href": "/about"
+                    }
+                }
+            }
+        ]
+    }
+]

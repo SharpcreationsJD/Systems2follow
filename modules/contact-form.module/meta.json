@@ -1,0 +1,32 @@
+{
+    "label":  "Contact Formulier",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "form",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Contact Formulier",
+                          "description":  "Contact formulier met naam, email, telefoon en bericht velden. Kan gekoppeld worden aan HubSpot forms.",
+                          "features":  [
+                                           "Titel en beschrijving",
+                                           "Aanpasbare veldlabels",
+                                           "Optionele HubSpot form integratie",
+                                           "Gestylede submit knop"
+                                       ]
+                      }
+}

@@ -1,0 +1,32 @@
+{
+    "label":  "Webinar Grid",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "video",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Webinar Grid",
+                          "description":  "Grid van aankomende webinars met afbeelding, titel, datum en registratie link.",
+                          "features":  [
+                                           "Titel en beschrijving",
+                                           "1-8 webinars",
+                                           "Afbeelding, titel, datum per webinar",
+                                           "Registratie link"
+                                       ]
+                      }
+}

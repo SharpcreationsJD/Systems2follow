@@ -1,0 +1,33 @@
+{
+    "label":  "Hoe Het Werkt",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "module",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Hoe Het Werkt - Stappen Module",
+                          "description":  "Visuele uitleg van het proces in 4 stappen. Elke stap heeft een ronde afbeelding en titel. Lichte achtergrond met gecentreerde layout.",
+                          "features":  [
+                                           "Eyebrow tekst boven de titel",
+                                           "Titel met accent kleur mogelijkheid",
+                                           "2-6 configureerbare stappen",
+                                           "Ronde afbeeldingen per stap",
+                                           "Optionele CTA knop onderaan"
+                                       ]
+                      }
+}

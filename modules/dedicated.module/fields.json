@@ -1,0 +1,55 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "help_text": "Groene titel van de sectie",
+        "default": "A dedicated solution for startups and enterprises"
+    },
+    {
+        "id": "description",
+        "name": "description",
+        "label": "Beschrijving",
+        "type": "richtext",
+        "default": "Invest automatically while staying in control of your own capital. Smart, transparent, and built for long-term results."
+    },
+    {
+        "id": "cta_button",
+        "name": "cta_button",
+        "label": "CTA Knop",
+        "type": "group",
+        "children": [
+            {
+                "id": "text",
+                "name": "text",
+                "label": "Knop Tekst",
+                "type": "text",
+                "default": "Download our starter guide"
+            },
+            {
+                "id": "url",
+                "name": "url",
+                "label": "Knop URL / Download",
+                "type": "link",
+                "default": {
+                    "url": {
+                        "href": "#"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "background_image",
+        "name": "background_image",
+        "label": "Achtergrond Afbeelding",
+        "type": "image",
+        "help_text": "Afbeelding rechts van de content",
+        "default": {
+            "src": "/Systems2followTheme/images/dedicated-section.jpg",
+            "alt": "CTA background"
+        }
+    }
+]
+

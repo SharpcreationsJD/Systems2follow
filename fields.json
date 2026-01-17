@@ -1,0 +1,92 @@
+[
+    {
+        "id": "colors",
+        "name": "colors",
+        "label": "Kleuren",
+        "type": "group",
+        "children": [
+            {
+                "id": "primary_color",
+                "name": "primary_color",
+                "label": "Primaire kleur (Groen)",
+                "type": "color",
+                "default": {
+                    "color": "#08ba7c"
+                }
+            },
+            {
+                "id": "secondary_color",
+                "name": "secondary_color",
+                "label": "Secundaire kleur (Accent Rood)",
+                "type": "color",
+                "default": {
+                    "color": "#fd675e"
+                }
+            },
+            {
+                "id": "background_dark",
+                "name": "background_dark",
+                "label": "Donkere achtergrond",
+                "type": "color",
+                "default": {
+                    "color": "#03251a"
+                }
+            },
+            {
+                "id": "background_light",
+                "name": "background_light",
+                "label": "Lichte achtergrond",
+                "type": "color",
+                "default": {
+                    "color": "#f2f4f4"
+                }
+            },
+            {
+                "id": "text_light",
+                "name": "text_light",
+                "label": "Lichte tekst",
+                "type": "color",
+                "default": {
+                    "color": "#ffffff"
+                }
+            },
+            {
+                "id": "text_dark",
+                "name": "text_dark",
+                "label": "Donkere tekst",
+                "type": "color",
+                "default": {
+                    "color": "#002317"
+                }
+            }
+        ]
+    },
+    {
+        "id": "typography",
+        "name": "typography",
+        "label": "Typografie",
+        "type": "group",
+        "children": [
+            {
+                "id": "heading_font",
+                "name": "heading_font",
+                "label": "Heading lettertype",
+                "type": "font",
+                "default": {
+                    "font": "DM Serif Display",
+                    "font_set": "GOOGLE"
+                }
+            },
+            {
+                "id": "body_font",
+                "name": "body_font",
+                "label": "Body lettertype",
+                "type": "font",
+                "default": {
+                    "font": "DM Sans",
+                    "font_set": "GOOGLE"
+                }
+            }
+        ]
+    }
+]

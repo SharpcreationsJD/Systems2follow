@@ -1,0 +1,263 @@
+[
+    {
+        "id": "logo",
+        "name": "logo",
+        "label": "Logo",
+        "type": "image",
+        "help_text": "Footer logo (donkere versie)",
+        "default": {
+            "src": "/Systems2followTheme/images/logo-dark.svg",
+            "alt": "Systems2follow"
+        }
+    },
+    {
+        "id": "description",
+        "name": "description",
+        "label": "Beschrijving",
+        "type": "text",
+        "default": "Invest automatically while staying in control of your capital. Smart, transparent trading."
+    },
+    {
+        "id": "newsletter",
+        "name": "newsletter",
+        "label": "Nieuwsbrief",
+        "type": "group",
+        "children": [
+            {
+                "id": "newsletter_show",
+                "name": "newsletter_show",
+                "label": "Toon Nieuwsbrief",
+                "type": "boolean",
+                "default": true
+            },
+            {
+                "id": "placeholder",
+                "name": "placeholder",
+                "label": "Placeholder",
+                "type": "text",
+                "default": "Enter your email"
+            },
+            {
+                "id": "button_text",
+                "name": "button_text",
+                "label": "Knop Tekst",
+                "type": "text",
+                "default": "Subscribe"
+            },
+            {
+                "id": "form_id",
+                "name": "form_id",
+                "label": "HubSpot Form ID",
+                "type": "text",
+                "help_text": "Optioneel: koppel aan HubSpot form",
+                "default": ""
+            }
+        ]
+    },
+    {
+        "id": "menu_columns",
+        "name": "menu_columns",
+        "label": "Menu Kolommen",
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "max": 4
+        },
+        "children": [
+            {
+                "id": "column_title",
+                "name": "column_title",
+                "label": "Kolom Titel",
+                "type": "text",
+                "default": "Menu"
+            },
+            {
+                "id": "links",
+                "name": "links",
+                "label": "Links",
+                "type": "group",
+                "occurrence": {
+                    "min": 1,
+                    "max": 10
+                },
+                "children": [
+                    {
+                        "id": "text",
+                        "name": "text",
+                        "label": "Link Tekst",
+                        "type": "text",
+                        "default": "Link"
+                    },
+                    {
+                        "id": "url",
+                        "name": "url",
+                        "label": "URL",
+                        "type": "link",
+                        "default": {
+                            "url": {
+                                "href": "#"
+                            }
+                        }
+                    }
+                ]
+            }
+        ],
+        "default": [
+            {
+                "column_title": "Menu",
+                "links": [
+                    {
+                        "text": "Home",
+                        "url": {
+                            "url": {
+                                "href": "/"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Systems",
+                        "url": {
+                            "url": {
+                                "href": "/systems"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Pricing",
+                        "url": {
+                            "url": {
+                                "href": "/pricing"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Resources",
+                        "url": {
+                            "url": {
+                                "href": "/resources"
+                            }
+                        }
+                    },
+                    {
+                        "text": "About",
+                        "url": {
+                            "url": {
+                                "href": "/about"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Contact",
+                        "url": {
+                            "url": {
+                                "href": "/contact"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "column_title": "Company",
+                "links": [
+                    {
+                        "text": "About",
+                        "url": {
+                            "url": {
+                                "href": "/about"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Contact us",
+                        "url": {
+                            "url": {
+                                "href": "/contact"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Careers",
+                        "url": {
+                            "url": {
+                                "href": "/careers"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Culture",
+                        "url": {
+                            "url": {
+                                "href": "/culture"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Help Center",
+                        "url": {
+                            "url": {
+                                "href": "/help"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Support",
+                        "url": {
+                            "url": {
+                                "href": "/support"
+                            }
+                        }
+                    },
+                    {
+                        "text": "Legal",
+                        "url": {
+                            "url": {
+                                "href": "/legal"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "social_links",
+        "name": "social_links",
+        "label": "Instagram Grid",
+        "type": "group",
+        "children": [
+            {
+                "id": "social_title",
+                "name": "social_title",
+                "label": "Titel",
+                "type": "text",
+                "default": "Follow on Instagram"
+            },
+            {
+                "id": "instagram_grid",
+                "name": "instagram_grid",
+                "label": "Instagram Tiles",
+                "type": "group",
+                "occurrence": {
+                    "min": 4,
+                    "max": 4,
+                    "default": 4
+                },
+                "children": [
+                    {
+                        "id": "image",
+                        "name": "image",
+                        "label": "Image",
+                        "type": "image"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "copyright",
+        "name": "copyright",
+        "label": "Copyright Tekst",
+        "type": "text",
+        "default": "Copyright &copy; 2024 Systems2follow | All Rights Reserved"
+    }
+]

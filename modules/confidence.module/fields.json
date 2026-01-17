@@ -1,0 +1,62 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "help_text": "Groene titel van de sectie",
+        "default": "Invest confidently, stay in control of your capital"
+    },
+    {
+        "id": "paragraphs",
+        "name": "paragraphs",
+        "label": "Tekst Paragrafen",
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "max": 5
+        },
+        "children": [
+            {
+                "id": "text",
+                "name": "text",
+                "label": "Paragraaf",
+                "type": "richtext",
+                "default": "Paragraaf tekst"
+            },
+            {
+                "id": "is_highlight",
+                "name": "is_highlight",
+                "label": "Highlight (dikgedrukt)",
+                "type": "boolean",
+                "default": false
+            }
+        ],
+        "default": [
+            {
+                "text": "Systems2follow combines automation, transparency, and security, giving you a hands-off way to invest while remaining fully in control.",
+                "is_highlight": false
+            },
+            {
+                "text": "Your funds never leave your own brokerage account. Systems2follow only replicates trades, we don't handle your money. You can pause trading, change systems, or withdraw at any time.",
+                "is_highlight": false
+            },
+            {
+                "text": "It's professional investing made safe, smart, and simple.",
+                "is_highlight": true
+            }
+        ]
+    },
+    {
+        "id": "background_image",
+        "name": "background_image",
+        "label": "Achtergrond Afbeelding",
+        "type": "image",
+        "help_text": "Afbeelding rechts van de content (aanbevolen: 960x650px)",
+        "default": {
+            "src": "/Systems2followTheme/images/confident-module.jpg",
+            "alt": "Confidence background"
+        }
+    }
+]
+

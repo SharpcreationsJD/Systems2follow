@@ -1,0 +1,33 @@
+{
+    "label":  "Prijzen Selector",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "credit-card",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Pricing / Abonnement Selector",
+                          "description":  "Interactieve module voor het kiezen van abonnement factor en duur. Toont samenvatting en formulier.",
+                          "features":  [
+                                           "Duur opties (maand, jaar, etc.)",
+                                           "Factor opties met kapitaal en kosten",
+                                           "Live samenvatting",
+                                           "Contactgegevens formulier",
+                                           "Toestemming checkbox"
+                                       ]
+                      }
+}

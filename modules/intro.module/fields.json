@@ -1,0 +1,55 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "richtext",
+        "help_text": "Hoofdtitel met highlight woorden. Gebruik <span> tags voor accent kleuren.",
+        "default": "Investing successfully takes <span>time,</span> <span>strategy,</span> and <span>experience</span>."
+    },
+    {
+        "id": "lead_text",
+        "name": "lead_text",
+        "label": "Lead Tekst",
+        "type": "text",
+        "help_text": "Korte, dikgedrukte tekst onder de titel",
+        "default": "Most investors don't have the hours or expertise to trade like professionals."
+    },
+    {
+        "id": "body_text",
+        "name": "body_text",
+        "label": "Body Tekst",
+        "type": "richtext",
+        "help_text": "Uitgebreide beschrijving",
+        "default": "Systems2follow connects your account directly to professional trading systems, so every trade executed by an expert is mirrored in your portfolio, safely and automatically."
+    },
+    {
+        "id": "image",
+        "name": "image",
+        "label": "Afbeelding",
+        "type": "image",
+        "help_text": "Afbeelding rechts van de tekst (aanbevolen: 600x400px)",
+        "default": {
+            "src": "/Systems2followTheme/images/section-intro.png",
+            "alt": "Introduction image"
+        }
+    },
+    {
+        "id": "image_position",
+        "name": "image_position",
+        "label": "Afbeelding Positie",
+        "type": "choice",
+        "choices": [
+            [
+                "right",
+                "Rechts"
+            ],
+            [
+                "left",
+                "Links"
+            ]
+        ],
+        "default": "right"
+    }
+]
+

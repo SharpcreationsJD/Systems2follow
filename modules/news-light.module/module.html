@@ -1,0 +1,102 @@
+{# 
+  ============================================================
+  MODULE: Nieuws & Insights
+  ============================================================
+  BESCHRIJVING:
+  Tabbladen interface voor nieuws en artikelen.
+  Interactieve tabs met artikel cards.
+  
+  OPTIES:
+  - heading: Sectie titel
+  - subtitle: Beschrijving
+  - tabs: Array van tabbladen met artikelen
+  - cta_button: Knop naar blog/nieuws pagina
+  
+  STYLING:
+  - Donkere achtergrond (#002317)
+  - Witte artikel cards
+  - Tab buttons met active state
+  ============================================================
+#}
+
+<section class="news-module news-module--light" id="news-{{ name }}">
+  <div class="container">
+    <div class="news-header text-center">
+      <h2>{{ module.heading }}</h2>
+      {% if module.subtitle %}
+        <p>{{ module.subtitle }}</p>
+      {% endif %}
+    </div>
+
+    <div class="news-tabs">
+      {% for tab in module.tabs %}
+        <button class="news-tab {% if loop.first %}is-active{% endif %}" type="button" data-tab="tab-{{ loop.index }}">
+          {{ tab.name }}
+        </button>
+      {% endfor %}
+    </div>
+
+    <div class="news-panels">
+      {% for tab in module.tabs %}
+        <div class="news-panel {% if loop.first %}is-active{% endif %}" data-panel="tab-{{ loop.index }}">
+          {% for article in tab.articles %}
+            <article class="news-card">
+              <div class="news-media">
+                {% if article.image.src %}
+                  {% set news_src = article.image.src %}
+                  {% if news_src is string_startingwith "/" %}
+                    {% set news_src = get_asset_url(news_src) %}
+                  {% endif %}
+                  <img src="{{ news_src }}" alt="{{ article.image.alt }}">
+                {% else %}
+                  <img src="{{ get_asset_url('/Systems2followTheme/images/news.png') }}" alt="News">
+                {% endif %}
+                {% if article.badge %}
+                  <span class="news-pill">{{ article.badge }}</span>
+                {% endif %}
+              </div>
+              <div class="news-body">
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.excerpt }}</p>
+                <a href="{{ article.link.url.href }}" class="news-link">
+                  Learn more <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if module.cta_button.text %}
+      <div class="news-cta">
+        <a class="btn btn-outline-light rounded-pill" href="{{ module.cta_button.url.url.href }}">
+          {{ module.cta_button.text }} <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<script>
+(function() {
+  const module = document.getElementById('news-{{ name }}');
+  if (!module) return;
+  
+  const tabs = module.querySelectorAll('.news-tab');
+  const panels = module.querySelectorAll('.news-panel');
+  
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
+      
+      tabs.forEach(t => t.classList.remove('is-active'));
+      panels.forEach(p => p.classList.remove('is-active'));
+      
+      tab.classList.add('is-active');
+      const activePanel = module.querySelector(`.news-panel[data-panel="${target}"]`);
+      if (activePanel) activePanel.classList.add('is-active');
+    });
+  });
+})();
+</script>

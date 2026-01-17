@@ -1,0 +1,32 @@
+{
+    "label":  "Intro Sectie",
+    "css_assets":  [
+
+                   ],
+    "external_js":  [
+
+                    ],
+    "js_assets":  [
+
+                  ],
+    "global":  false,
+    "host_template_types":  [
+                                "PAGE"
+                            ],
+    "icon":  "section",
+    "smart_type":  "NOT_SMART",
+    "is_available_for_new_content":  true,
+    "categories":  [
+                       "BODY_CONTENT"
+                   ],
+    "documentation":  {
+                          "title":  "Intro Sectie",
+                          "description":  "Twee-koloms sectie met titel, tekst en afbeelding. Ideaal voor het introduceren van het bedrijf of product direct na de hero.",
+                          "features":  [
+                                           "Titel met highlight woorden in accent kleur",
+                                           "Lead tekst (dikgedrukt) + body tekst",
+                                           "Afbeelding met afgeronde hoeken",
+                                           "Keuze: afbeelding links of rechts"
+                                       ]
+                      }
+}

@@ -1,0 +1,52 @@
+{# 
+  ============================================================
+  MODULE: Story / Verhaal Sectie
+  ============================================================
+  BESCHRIJVING:
+  Twee-koloms sectie met afbeelding en tekst.
+  
+  OPTIES:
+  - heading: Titel
+  - paragraphs: Richtext tekst
+  - image: Afbeelding
+  - image_position: links/rechts
+  
+  STYLING:
+  - Witte achtergrond
+  - Afgeronde afbeelding
+  ============================================================
+#}
+
+{% set is_reversed = module.image_position == "right" %}
+{% set is_gray = module.background_color == "gray" %}
+
+<section class="story-module {% if is_reversed %}story-module--reverse{% endif %} {% if is_gray %}story-module--gray{% endif %}">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-visual">
+        {% if module.image.src %}
+          {% set story_src = module.image.src %}
+          {% if story_src is string_startingwith "/" %}
+            {% set story_src = get_asset_url(story_src) %}
+          {% endif %}
+          <img src="{{ story_src }}" alt="{{ module.image.alt }}">
+        {% else %}
+          <img src="{{ get_asset_url('/Systems2followTheme/images/our-story.png') }}" alt="Our Story">
+        {% endif %}
+      </div>
+      <div class="story-content">
+        <h2>{{ module.heading }}</h2>
+        <div class="story-text">{{ module.paragraphs }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% require_css %}
+<style>
+  .story-module--gray {
+    background-color: #f2f4f4;
+    padding: 80px 0; /* Add padding for aesthetics if gray */
+  }
+</style>
+{% end_require_css %}

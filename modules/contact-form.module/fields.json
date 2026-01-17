@@ -1,0 +1,72 @@
+[
+    {
+        "name": "heading",
+        "label": "Titel",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "Become a trader"
+    },
+    {
+        "name": "description",
+        "label": "Beschrijving",
+        "required": false,
+        "locked": false,
+        "type": "richtext",
+        "default": "Lorem ipsum dolor sit amet consectetur adipiscing elit."
+    },
+    {
+        "name": "image",
+        "label": "Afbeelding (Optioneel)",
+        "type": "image",
+        "help_text": "Indien geselecteerd, wordt deze afbeelding naast het formulier getoond."
+    },
+    {
+        "name": "form_fields",
+        "label": "Formulier Velden Labels",
+        "type": "group",
+        "children": [
+            {
+                "name": "name_label",
+                "label": "Naam Label",
+                "type": "text",
+                "default": "Name"
+            },
+            {
+                "name": "lastname_label",
+                "label": "Achternaam Label",
+                "type": "text",
+                "default": "Last Name"
+            },
+            {
+                "name": "email_label",
+                "label": "Email Label",
+                "type": "text",
+                "default": "Email"
+            },
+            {
+                "name": "phone_label",
+                "label": "Telefoon Label",
+                "type": "text",
+                "default": "Phone"
+            },
+            {
+                "name": "message_label",
+                "label": "Bericht Label",
+                "type": "text",
+                "default": "Leave us a message"
+            }
+        ]
+    },
+    {
+        "name": "submit_button_text",
+        "label": "Knop Tekst",
+        "type": "text",
+        "default": "Send message"
+    },
+    {
+        "name": "hubspot_form_id",
+        "label": "HubSpot Form ID",
+        "type": "form"
+    }
+]

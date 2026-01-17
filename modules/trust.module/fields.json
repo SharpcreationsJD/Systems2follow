@@ -1,0 +1,68 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "help_text": "Rode titel van de sectie",
+        "default": "Professionals you can trust"
+    },
+    {
+        "id": "description",
+        "name": "description",
+        "label": "Beschrijving",
+        "type": "richtext",
+        "default": "We take pride in partnering only with verified experts. Each trader and trading system goes through a rigorous approval and testing process before appearing on our platform."
+    },
+    {
+        "id": "highlights_label",
+        "name": "highlights_label",
+        "label": "Highlights Label",
+        "type": "text",
+        "default": "Key Highlights:"
+    },
+    {
+        "id": "highlights",
+        "name": "highlights",
+        "label": "Highlights Lijst",
+        "type": "group",
+        "occurrence": {
+            "min": 1,
+            "max": 8
+        },
+        "children": [
+            {
+                "id": "text",
+                "name": "text",
+                "label": "Highlight Item",
+                "type": "text",
+                "default": "Highlight item"
+            }
+        ],
+        "default": [
+            {
+                "text": "Managed by professional, experienced traders"
+            },
+            {
+                "text": "Only consistent and proven systems are published"
+            },
+            {
+                "text": "Every system independently validated and tested"
+            },
+            {
+                "text": "Each system assigned a clear 1-7 risk classification"
+            }
+        ]
+    },
+    {
+        "id": "background_image",
+        "name": "background_image",
+        "label": "Achtergrond Afbeelding",
+        "type": "image",
+        "help_text": "Afbeelding links van de content",
+        "default": {
+            "src": "/Systems2followTheme/images/select-img.jpg",
+            "alt": "Trust background"
+        }
+    }
+]

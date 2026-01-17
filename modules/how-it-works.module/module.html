@@ -1,0 +1,59 @@
+{# 
+  ============================================================
+  MODULE: Hoe Het Werkt - Stappen
+  ============================================================
+  BESCHRIJVING:
+  Visuele uitleg van het proces in meerdere stappen.
+  Elke stap heeft een ronde afbeelding en titel.
+  
+  OPTIES:
+  - eyebrow: Kleine tekst boven titel
+  - heading: Hoofdtitel met accent mogelijkheid
+  - subtitle: Ondertitel/beschrijving
+  - steps: Array van stappen (2-6) met afbeelding en titel
+  - cta_button: Optionele knop onderaan
+  
+  STYLING:
+  - Lichte achtergrond (#f2f4f4)
+  - Donkere tekst
+  - Ronde afbeeldingen met schaduw
+  - Gecentreerde layout
+  ============================================================
+#}
+
+<section class="how-it-works">
+  <div class="container text-center">
+    {% if module.eyebrow %}
+      <span class="eyebrow">{{ module.eyebrow }}</span>
+    {% endif %}
+    
+    <h2 class="how-title">{{ module.heading }}</h2>
+    
+    {% if module.subtitle %}
+      <p class="how-subtitle">{{ module.subtitle }}</p>
+    {% endif %}
+    
+    <div class="row g-4 justify-content-center how-steps">
+      {% for step in module.steps %}
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="how-step">
+            <div class="step-avatar">
+              {% if step.image.src %}
+                <img src="{{ step.image.src }}" alt="{{ step.image.alt }}">
+              {% else %}
+                <div class="step-placeholder">{{ loop.index }}</div>
+              {% endif %}
+            </div>
+            <h3>{{ step.title }}</h3>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    {% if module.cta_button.text %}
+      <a class="btn how-cta" href="{{ module.cta_button.url.url.href }}">
+        {{ module.cta_button.text }}
+      </a>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,77 @@
+[
+    {
+        "id": "heading",
+        "name": "heading",
+        "label": "Titel",
+        "type": "text",
+        "default": "What to expect from this guide"
+    },
+    {
+        "id": "description",
+        "name": "description",
+        "label": "Beschrijving",
+        "type": "text",
+        "default": "Systems2follow makes professional investing accessible and effortless. With just four simple steps, you can start benefiting from the expertise of top traders."
+    },
+    {
+        "id": "items",
+        "name": "items",
+        "label": "Verwachtingen",
+        "type": "group",
+        "occurrence": {
+            "min": 2,
+            "max": 6
+        },
+        "children": [
+            {
+                "id": "icon",
+                "name": "icon",
+                "label": "Bootstrap Icon",
+                "type": "text",
+                "help_text": "Bijv: bi-graph-up, bi-person-check, bi-activity",
+                "default": "bi-star"
+            },
+            {
+                "id": "title",
+                "name": "title",
+                "label": "Titel",
+                "type": "text",
+                "default": "Feature title"
+            },
+            {
+                "id": "item_description",
+                "name": "item_description",
+                "label": "Beschrijving",
+                "type": "text",
+                "default": "Feature description"
+            }
+        ],
+        "default": [
+            {
+                "icon": "bi-graph-up",
+                "title": "Transparent performance",
+                "item_description": "Every trading system comes with a clear history of annual and total performance."
+            },
+            {
+                "icon": "bi-person-check",
+                "title": "Verified experts",
+                "item_description": "Only proven and consistent trading systems make it onto the platform."
+            },
+            {
+                "icon": "bi-activity",
+                "title": "Clear risk indicators",
+                "item_description": "Each system is assigned a 1–7 risk classification."
+            }
+        ]
+    },
+    {
+        "id": "image",
+        "name": "image",
+        "label": "Preview Afbeelding",
+        "type": "image",
+        "default": {
+            "src": "/Systems2followTheme/images/guide.png",
+            "alt": "Guide preview"
+        }
+    }
+]
