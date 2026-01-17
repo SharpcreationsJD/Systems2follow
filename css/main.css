@@ -4203,6 +4203,15 @@ html body .hs-search-results__title {
   font-family: "DM Serif Display", serif;
   font-size: 24px !important;
   margin-bottom: 12px !important;
+  color: #ffffff !important;
+}
+
+html body .hs-search-results__pagination__link {
+  color: #ffffff !important;
+}
+
+.hs-search-results__pagination__link-text {
+  color: #ffffff !important;
 }
 
 /* SPECIFIC LINK OVERRIDE FOR BLUE HEADERS */
